@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using VetrinaDigitale.View;
 
 namespace VetrinaDigitale
 {
@@ -16,7 +17,7 @@ namespace VetrinaDigitale
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new frmLogin());
         }
     }
 }
