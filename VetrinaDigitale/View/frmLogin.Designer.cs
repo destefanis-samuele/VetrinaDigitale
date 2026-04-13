@@ -31,10 +31,10 @@
             this.lblUsername = new System.Windows.Forms.Label();
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.grbLogin = new System.Windows.Forms.GroupBox();
-            this.lblPassword = new System.Windows.Forms.Label();
-            this.txtPassword = new System.Windows.Forms.TextBox();
-            this.chkPassword = new System.Windows.Forms.CheckBox();
             this.btnAccedi = new System.Windows.Forms.Button();
+            this.chkPassword = new System.Windows.Forms.CheckBox();
+            this.txtPassword = new System.Windows.Forms.TextBox();
+            this.lblPassword = new System.Windows.Forms.Label();
             this.grbLogin.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -69,21 +69,15 @@
             this.grbLogin.TabStop = false;
             this.grbLogin.Text = "LOGIN";
             // 
-            // lblPassword
+            // btnAccedi
             // 
-            this.lblPassword.AutoSize = true;
-            this.lblPassword.Location = new System.Drawing.Point(21, 65);
-            this.lblPassword.Name = "lblPassword";
-            this.lblPassword.Size = new System.Drawing.Size(67, 16);
-            this.lblPassword.TabIndex = 2;
-            this.lblPassword.Text = "Password";
-            // 
-            // txtPassword
-            // 
-            this.txtPassword.Location = new System.Drawing.Point(97, 65);
-            this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(100, 22);
-            this.txtPassword.TabIndex = 3;
+            this.btnAccedi.Location = new System.Drawing.Point(65, 121);
+            this.btnAccedi.Name = "btnAccedi";
+            this.btnAccedi.Size = new System.Drawing.Size(75, 23);
+            this.btnAccedi.TabIndex = 5;
+            this.btnAccedi.Text = "ACCEDI";
+            this.btnAccedi.UseVisualStyleBackColor = true;
+            this.btnAccedi.Click += new System.EventHandler(this.btnAccedi_Click);
             // 
             // chkPassword
             // 
@@ -96,15 +90,21 @@
             this.chkPassword.UseVisualStyleBackColor = true;
             this.chkPassword.CheckedChanged += new System.EventHandler(this.chkPassword_CheckedChanged);
             // 
-            // btnAccedi
+            // txtPassword
             // 
-            this.btnAccedi.Location = new System.Drawing.Point(65, 121);
-            this.btnAccedi.Name = "btnAccedi";
-            this.btnAccedi.Size = new System.Drawing.Size(75, 23);
-            this.btnAccedi.TabIndex = 5;
-            this.btnAccedi.Text = "ACCEDI";
-            this.btnAccedi.UseVisualStyleBackColor = true;
-            this.btnAccedi.Click += new System.EventHandler(this.btnAccedi_Click);
+            this.txtPassword.Location = new System.Drawing.Point(97, 65);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Size = new System.Drawing.Size(100, 22);
+            this.txtPassword.TabIndex = 3;
+            // 
+            // lblPassword
+            // 
+            this.lblPassword.AutoSize = true;
+            this.lblPassword.Location = new System.Drawing.Point(21, 65);
+            this.lblPassword.Name = "lblPassword";
+            this.lblPassword.Size = new System.Drawing.Size(67, 16);
+            this.lblPassword.TabIndex = 2;
+            this.lblPassword.Text = "Password";
             // 
             // frmLogin
             // 

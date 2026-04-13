@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
 using System.Web; //per Server.MapPath
+using System.IO;
 
 namespace ADOSQLServer2017_ns
 {
@@ -26,16 +27,21 @@ namespace ADOSQLServer2017_ns
         }
         private void impostaConnessione(string dbName)
         {
-            string cnString,DB;
+            string cnString, DB;
             try
             {
-                //var hostingRoot = HostingEnvironment.IsHosted
-                //                  ? HostingEnvironment.MapPath("~/") //se metto una sottocartella (esempio App_data) la mappa
-                //                  : AppDomain.CurrentDomain.BaseDirectory;
-                //DB = hostingRoot + dbName;
-                DB = AppDomain.CurrentDomain.BaseDirectory + dbName;
-                //DB = HttpContext.Current.Server.MapPath(dbName); //server.MapPath restituisce il percorso fisico della risoprsa passata come parametro
-                cnString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + DB +";Integrated Security=True;Connect Timeout=30";
+                // If dbName is an absolute path, use it; otherwise treat it as relative to the app base directory
+                if (Path.IsPathRooted(dbName))
+                {
+                    DB = dbName;
+                }
+                else
+                {
+                    DB = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, dbName);
+                }
+
+                // Build connection string pointing to the MDF file
+                cnString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + DB + ";Integrated Security=True;Connect Timeout=30";
                 cn = new SqlConnection();
                 cn.ConnectionString = cnString;
                 cn.Open();
