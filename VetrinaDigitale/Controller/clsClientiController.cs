@@ -40,7 +40,7 @@ namespace VetrinaDigitale.Controller
             return dt;
         }
 
-        public object GetAllCitta()
+        public DataTable GetAllCitta()
         {
             DataTable dt = new DataTable();
             string query = "SELECT idCitta, citta + ' (' + provincia + ')' AS citta FROM CITTA ORDER BY citta";

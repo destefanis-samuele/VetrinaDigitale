@@ -32,7 +32,8 @@ namespace VetrinaDigitale.View
 
         private void btnVendite_Click(object sender, EventArgs e)
         {
-
+            frmVendite frmVendite = new frmVendite();
+            frmVendite.Show();
         }
     }
 }
