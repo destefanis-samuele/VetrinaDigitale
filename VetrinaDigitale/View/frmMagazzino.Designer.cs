@@ -38,23 +38,27 @@
             this.dgvMagazzino.AllowUserToDeleteRows = false;
             this.dgvMagazzino.AllowUserToResizeColumns = false;
             this.dgvMagazzino.AllowUserToResizeRows = false;
+            this.dgvMagazzino.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvMagazzino.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvMagazzino.Location = new System.Drawing.Point(12, 12);
             this.dgvMagazzino.Name = "dgvMagazzino";
             this.dgvMagazzino.ReadOnly = true;
             this.dgvMagazzino.RowHeadersWidth = 51;
             this.dgvMagazzino.RowTemplate.Height = 24;
-            this.dgvMagazzino.Size = new System.Drawing.Size(776, 350);
+            this.dgvMagazzino.Size = new System.Drawing.Size(845, 342);
             this.dgvMagazzino.TabIndex = 0;
             // 
             // frmMagazzino
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(869, 443);
             this.Controls.Add(this.dgvMagazzino);
             this.Name = "frmMagazzino";
             this.Text = "frmMagazzino";
+            this.Load += new System.EventHandler(this.frmMagazzino_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvMagazzino)).EndInit();
             this.ResumeLayout(false);
 

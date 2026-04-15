@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
             this.lblUsername = new System.Windows.Forms.Label();
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.grbLogin = new System.Windows.Forms.GroupBox();
@@ -35,7 +36,9 @@
             this.chkPassword = new System.Windows.Forms.CheckBox();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.lblPassword = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.grbLogin.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblUsername
@@ -51,7 +54,7 @@
             // 
             this.txtUsername.Location = new System.Drawing.Point(97, 29);
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(100, 22);
+            this.txtUsername.Size = new System.Drawing.Size(130, 22);
             this.txtUsername.TabIndex = 1;
             // 
             // grbLogin
@@ -62,18 +65,18 @@
             this.grbLogin.Controls.Add(this.lblPassword);
             this.grbLogin.Controls.Add(this.lblUsername);
             this.grbLogin.Controls.Add(this.txtUsername);
-            this.grbLogin.Location = new System.Drawing.Point(40, 33);
+            this.grbLogin.Location = new System.Drawing.Point(40, 213);
             this.grbLogin.Name = "grbLogin";
-            this.grbLogin.Size = new System.Drawing.Size(224, 166);
+            this.grbLogin.Size = new System.Drawing.Size(266, 194);
             this.grbLogin.TabIndex = 2;
             this.grbLogin.TabStop = false;
             this.grbLogin.Text = "LOGIN";
             // 
             // btnAccedi
             // 
-            this.btnAccedi.Location = new System.Drawing.Point(65, 121);
+            this.btnAccedi.Location = new System.Drawing.Point(66, 129);
             this.btnAccedi.Name = "btnAccedi";
-            this.btnAccedi.Size = new System.Drawing.Size(75, 23);
+            this.btnAccedi.Size = new System.Drawing.Size(112, 48);
             this.btnAccedi.TabIndex = 5;
             this.btnAccedi.Text = "ACCEDI";
             this.btnAccedi.UseVisualStyleBackColor = true;
@@ -82,7 +85,7 @@
             // chkPassword
             // 
             this.chkPassword.AutoSize = true;
-            this.chkPassword.Location = new System.Drawing.Point(40, 95);
+            this.chkPassword.Location = new System.Drawing.Point(55, 103);
             this.chkPassword.Name = "chkPassword";
             this.chkPassword.Size = new System.Drawing.Size(132, 20);
             this.chkPassword.TabIndex = 4;
@@ -94,7 +97,7 @@
             // 
             this.txtPassword.Location = new System.Drawing.Point(97, 65);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(100, 22);
+            this.txtPassword.Size = new System.Drawing.Size(130, 22);
             this.txtPassword.TabIndex = 3;
             // 
             // lblPassword
@@ -106,19 +109,33 @@
             this.lblPassword.TabIndex = 2;
             this.lblPassword.Text = "Password";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::VetrinaDigitale.Properties.Resources.icona;
+            this.pictureBox1.ImageLocation = "";
+            this.pictureBox1.Location = new System.Drawing.Point(101, 47);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(166, 118);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
+            // 
             // frmLogin
             // 
+            this.AcceptButton = this.btnAccedi;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(309, 239);
+            this.ClientSize = new System.Drawing.Size(353, 430);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.grbLogin);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmLogin";
-            this.ShowIcon = false;
             this.Text = "ACCESSO RISERVATO";
             this.grbLogin.ResumeLayout(false);
             this.grbLogin.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -132,5 +149,6 @@
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Label lblPassword;
         private System.Windows.Forms.Button btnAccedi;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

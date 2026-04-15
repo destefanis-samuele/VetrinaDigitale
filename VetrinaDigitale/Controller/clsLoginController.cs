@@ -15,7 +15,6 @@ namespace VetrinaDigitale.Controller
         private string dbName;
         public clsLoginController()
         {
-            // Default DB path on the user's Desktop: %USERPROFILE%\Desktop\Progetto\DB_INVENTARIO.MDF
             dbName = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), "Progetto", "DB", "Inventario.mdf");
         }
         public bool ControllaUtente(string username, string password)

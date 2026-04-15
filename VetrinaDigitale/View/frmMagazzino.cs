@@ -17,6 +17,15 @@ namespace VetrinaDigitale.View
         public frmMagazzino()
         {
             InitializeComponent();
+        }
+
+        /*
+         * ATT!!!
+         * Colorare le righe della dgv se la qtà disp è < x (rosso e verde)
+         */
+
+        private void frmMagazzino_Load(object sender, EventArgs e)
+        {
             CaricaProdotti();
         }
 
@@ -25,10 +34,11 @@ namespace VetrinaDigitale.View
             try
             {
                 magazzinoController = new clsMagazzinoController();
-                DataTable dt = magazzinoController.GetProdotti();
                 dgvMagazzino.DataSource = null;
-                dgvMagazzino.DataSource = dt;
-                dgvMagazzino.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                dgvMagazzino.DataSource = magazzinoController.GetAllProdotti();
+                dgvMagazzino.Columns["idVariante"].Visible = false;
+                dgvMagazzino.AutoResizeRows();
+                dgvMagazzino.AutoResizeColumns();
             }
             catch (Exception ex)
             {

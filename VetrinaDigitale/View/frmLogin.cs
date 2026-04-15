@@ -33,9 +33,9 @@ namespace VetrinaDigitale.View
         {
             if (loginController.ControllaUtente(txtUsername.Text, txtPassword.Text))
             {
-                frmMagazzino frmMagazzino = new frmMagazzino();
+                frmMenu frmMenu = new frmMenu();
                 this.Hide();
-                frmMagazzino.ShowDialog();
+                frmMenu.ShowDialog();
             }
         }
     }
