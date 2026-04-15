@@ -24,12 +24,24 @@ namespace VetrinaDigitale.View
         private void frmClienti_Load(object sender, EventArgs e)
         {
             clientiController = new clsClientiController();
+
+            caricaDgvClienti();
+
+            caricaCmbCitta();
+        }
+
+        private void caricaDgvClienti()
+        {
             dgvClienti.DataSource = null;
             dgvClienti.DataSource = clientiController.GetAllClienti();
             dgvClienti.Columns["idCitta"].Visible = false;
             dgvClienti.AutoResizeColumns();
             dgvClienti.AutoResizeRows();
+        }
 
+        private void caricaCmbCitta()
+        {
+            cmbCitta.DataSource = null;
             cmbCitta.DataSource = clientiController.GetAllCitta();
             cmbCitta.DisplayMember = "citta";
             cmbCitta.ValueMember = "idCitta";

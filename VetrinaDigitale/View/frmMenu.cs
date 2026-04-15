@@ -35,5 +35,11 @@ namespace VetrinaDigitale.View
             frmVendite frmVendite = new frmVendite();
             frmVendite.Show();
         }
+
+        private void btnFornitori_Click(object sender, EventArgs e)
+        {
+            frmFornitori frmFornitori = new frmFornitori();
+            frmFornitori.Show();
+        }
     }
 }

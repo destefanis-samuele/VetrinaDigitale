@@ -79,6 +79,7 @@
             this.btnFornitori.TabIndex = 3;
             this.btnFornitori.Text = "FORNITORI";
             this.btnFornitori.UseVisualStyleBackColor = true;
+            this.btnFornitori.Click += new System.EventHandler(this.btnFornitori_Click);
             // 
             // btnOrdini
             // 

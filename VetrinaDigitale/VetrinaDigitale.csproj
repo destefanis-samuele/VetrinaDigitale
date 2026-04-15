@@ -63,6 +63,7 @@
   <ItemGroup>
     <Compile Include="App_Code\ADOSQLServer2017.cs" />
     <Compile Include="Controller\clsClientiController.cs" />
+    <Compile Include="Controller\clsFornitoriController.cs" />
     <Compile Include="Controller\clsLoginController.cs" />
     <Compile Include="Controller\clsMagazzinoController.cs" />
     <Compile Include="Controller\clsVenditeController.cs" />
@@ -78,6 +79,12 @@
     </Compile>
     <Compile Include="View\frmClienti.Designer.cs">
       <DependentUpon>frmClienti.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\frmFornitori.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmFornitori.Designer.cs">
+      <DependentUpon>frmFornitori.cs</DependentUpon>
     </Compile>
     <Compile Include="View\frmLogin.cs">
       <SubType>Form</SubType>
@@ -110,6 +117,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\frmClienti.resx">
       <DependentUpon>frmClienti.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmFornitori.resx">
+      <DependentUpon>frmFornitori.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
