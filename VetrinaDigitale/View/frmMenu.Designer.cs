@@ -108,6 +108,7 @@
             this.btnMarche.TabIndex = 6;
             this.btnMarche.Text = "MARCHE";
             this.btnMarche.UseVisualStyleBackColor = true;
+            this.btnMarche.Click += new System.EventHandler(this.btnMarche_Click);
             // 
             // btnCategorie
             // 
