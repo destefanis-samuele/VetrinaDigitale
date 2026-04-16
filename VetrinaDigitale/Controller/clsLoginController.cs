@@ -13,33 +13,28 @@ namespace VetrinaDigitale.Controller
     public class clsLoginController
     {
         private string dbName;
+        private ADOSQLServer2017 ado;
         public clsLoginController()
         {
             dbName = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), "Progetto", "DB", "Inventario.mdf");
+            ado = new ADOSQLServer2017(dbName);
         }
         public bool ControllaUtente(string username, string password)
         {
+            SqlCommand cmd = new SqlCommand();
+            object result;
+            cmd.CommandText = "SELECT COUNT(1) FROM UTENTI WHERE USERNAME = @username AND PASSWORD = @password";
+            cmd.Parameters.AddWithValue("@username", username);
+            cmd.Parameters.AddWithValue("@password", password);
             try
             {
-                string dbFile = dbName;
-                if (!File.Exists(dbFile))
-                {
-                    throw new FileNotFoundException("File database non trovato: " + dbFile);
-                }
-                ADOSQLServer2017 db = new ADOSQLServer2017(dbFile);
-                using (SqlCommand cmd = new SqlCommand())
-                {
-                    cmd.CommandText = "SELECT COUNT(1) FROM UTENTI WHERE USERNAME = @username AND PASSWORD = @password";
-                    cmd.Parameters.AddWithValue("@username", username);
-                    cmd.Parameters.AddWithValue("@password", password);
-                    object result = db.EseguiScalar(cmd);
-                    return Convert.ToInt32(result) == 1;
-                }
+                result = ado.EseguiScalar(cmd);
             }
             catch (Exception ex)
             {
                 throw new Exception("Errore durante il controllo dell'utente: " + ex.Message);
             }
+            return Convert.ToInt32(result) == 1;
         }
     }
 }
