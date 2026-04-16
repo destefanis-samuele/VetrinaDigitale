@@ -19,10 +19,12 @@ namespace VetrinaDigitale.View
             InitializeComponent();
         }
 
-        clsGeneriController generiController = new clsGeneriController();
+        clsGeneriController generiController;
 
         private void frmGeneri_Load(object sender, EventArgs e)
         {
+            generiController = new clsGeneriController();
+
             caricaDgvGeneri();
         }
 
