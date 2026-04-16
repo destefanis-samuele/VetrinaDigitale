@@ -22,7 +22,9 @@ namespace VetrinaDigitale.View
 
         /*
          * ATT!!!
-         * Colorare le righe della dgv se la qtà disp è < x (rosso e verde)
+         * Colorare le righe della dgv se la qtà disp è <:
+         * - 5 --> giallo
+         * - 0 --> rosso
          */
 
         private void frmMagazzino_Load(object sender, EventArgs e)
