@@ -30,7 +30,6 @@ namespace ADOSQLServer2017_ns
             string cnString, DB;
             try
             {
-                // If dbName is an absolute path, use it; otherwise treat it as relative to the app base directory
                 if (Path.IsPathRooted(dbName))
                 {
                     DB = dbName;
@@ -40,7 +39,6 @@ namespace ADOSQLServer2017_ns
                     DB = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, dbName);
                 }
 
-                // Build connection string pointing to the MDF file
                 cnString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + DB + ";Integrated Security=True;Connect Timeout=30";
                 cn = new SqlConnection();
                 cn.ConnectionString = cnString;
