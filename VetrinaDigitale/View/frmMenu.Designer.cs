@@ -98,6 +98,7 @@
             this.btnGeneri.TabIndex = 5;
             this.btnGeneri.Text = "GENERI";
             this.btnGeneri.UseVisualStyleBackColor = true;
+            this.btnGeneri.Click += new System.EventHandler(this.btnGeneri_Click);
             // 
             // btnMarche
             // 

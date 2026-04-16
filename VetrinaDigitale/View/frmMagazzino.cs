@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+//
 using System.Windows.Forms;
 using VetrinaDigitale.Controller;
 
@@ -26,6 +27,8 @@ namespace VetrinaDigitale.View
 
         private void frmMagazzino_Load(object sender, EventArgs e)
         {
+            magazzinoController = new clsMagazzinoController();
+
             CaricaProdotti();
         }
 
@@ -33,7 +36,6 @@ namespace VetrinaDigitale.View
         {
             try
             {
-                magazzinoController = new clsMagazzinoController();
                 dgvMagazzino.DataSource = null;
                 dgvMagazzino.DataSource = magazzinoController.GetAllProdotti();
                 dgvMagazzino.Columns["idVariante"].Visible = false;
