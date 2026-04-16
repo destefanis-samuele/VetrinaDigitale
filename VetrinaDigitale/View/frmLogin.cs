@@ -21,7 +21,6 @@ namespace VetrinaDigitale.View
         public frmLogin()
         {
             InitializeComponent();
-            txtPassword.UseSystemPasswordChar = true;
         }
 
         private void chkPassword_CheckedChanged(object sender, EventArgs e)

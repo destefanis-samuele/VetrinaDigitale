@@ -32,12 +32,12 @@
             this.lblUsername = new System.Windows.Forms.Label();
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.grbLogin = new System.Windows.Forms.GroupBox();
+            this.lblMessaggio = new System.Windows.Forms.Label();
             this.btnAccedi = new System.Windows.Forms.Button();
             this.chkPassword = new System.Windows.Forms.CheckBox();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.lblPassword = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.lblMessaggio = new System.Windows.Forms.Label();
             this.grbLogin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -74,6 +74,16 @@
             this.grbLogin.TabStop = false;
             this.grbLogin.Text = "LOGIN";
             // 
+            // lblMessaggio
+            // 
+            this.lblMessaggio.AutoSize = true;
+            this.lblMessaggio.Location = new System.Drawing.Point(63, 180);
+            this.lblMessaggio.Name = "lblMessaggio";
+            this.lblMessaggio.Size = new System.Drawing.Size(44, 16);
+            this.lblMessaggio.TabIndex = 6;
+            this.lblMessaggio.Text = "label1";
+            this.lblMessaggio.Visible = false;
+            // 
             // btnAccedi
             // 
             this.btnAccedi.Location = new System.Drawing.Point(66, 129);
@@ -101,6 +111,7 @@
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(130, 22);
             this.txtPassword.TabIndex = 3;
+            this.txtPassword.UseSystemPasswordChar = true;
             // 
             // lblPassword
             // 
@@ -121,16 +132,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
-            // 
-            // lblMessaggio
-            // 
-            this.lblMessaggio.AutoSize = true;
-            this.lblMessaggio.Location = new System.Drawing.Point(63, 180);
-            this.lblMessaggio.Name = "lblMessaggio";
-            this.lblMessaggio.Size = new System.Drawing.Size(44, 16);
-            this.lblMessaggio.TabIndex = 6;
-            this.lblMessaggio.Text = "label1";
-            this.lblMessaggio.Visible = false;
             // 
             // frmLogin
             // 
