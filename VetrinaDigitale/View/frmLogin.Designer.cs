@@ -37,6 +37,7 @@
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.lblPassword = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lblMessaggio = new System.Windows.Forms.Label();
             this.grbLogin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -59,6 +60,7 @@
             // 
             // grbLogin
             // 
+            this.grbLogin.Controls.Add(this.lblMessaggio);
             this.grbLogin.Controls.Add(this.btnAccedi);
             this.grbLogin.Controls.Add(this.chkPassword);
             this.grbLogin.Controls.Add(this.txtPassword);
@@ -67,7 +69,7 @@
             this.grbLogin.Controls.Add(this.txtUsername);
             this.grbLogin.Location = new System.Drawing.Point(40, 213);
             this.grbLogin.Name = "grbLogin";
-            this.grbLogin.Size = new System.Drawing.Size(266, 194);
+            this.grbLogin.Size = new System.Drawing.Size(266, 205);
             this.grbLogin.TabIndex = 2;
             this.grbLogin.TabStop = false;
             this.grbLogin.Text = "LOGIN";
@@ -120,6 +122,16 @@
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             // 
+            // lblMessaggio
+            // 
+            this.lblMessaggio.AutoSize = true;
+            this.lblMessaggio.Location = new System.Drawing.Point(63, 180);
+            this.lblMessaggio.Name = "lblMessaggio";
+            this.lblMessaggio.Size = new System.Drawing.Size(44, 16);
+            this.lblMessaggio.TabIndex = 6;
+            this.lblMessaggio.Text = "label1";
+            this.lblMessaggio.Visible = false;
+            // 
             // frmLogin
             // 
             this.AcceptButton = this.btnAccedi;
@@ -150,5 +162,6 @@
         private System.Windows.Forms.Label lblPassword;
         private System.Windows.Forms.Button btnAccedi;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label lblMessaggio;
     }
 }

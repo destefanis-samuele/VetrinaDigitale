@@ -37,6 +37,12 @@ namespace VetrinaDigitale.View
                 this.Hide();
                 frmMenu.ShowDialog();
             }
+            else
+            {
+                lblMessaggio.Text = "Username o password errati.";
+                lblMessaggio.ForeColor = Color.Red;
+                lblMessaggio.Visible = true;
+            }
         }
     }
 }
