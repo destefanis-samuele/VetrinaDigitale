@@ -35,6 +35,22 @@ namespace VetrinaDigitale.View
             string dataVendita = DateTime.Now.ToString("dd/MM/yyyy");
 
             caricaCmbProdotto();
+
+            impostaDgvScontrino(dgvScontrino, "idVariante;Prodotto;Taglia;Colore;Quantità;Totale", "idVariante;Prodotto;Taglia;Colore;Quantita;Totale");
+            lblTotale.Text = "";
+        }
+
+        private void impostaDgvScontrino(DataGridView dgv, string intestazione, string nomi)
+        {
+            string[] colonne = intestazione.Split(';');
+            string[] nomiArray = nomi.Split(';');
+            dgv.ColumnCount = colonne.Length;
+            for (int i = 0; i < colonne.Length; i++)
+            {
+                dgv.Columns[i].Name = nomiArray[i];
+                dgv.Columns[i].HeaderText = colonne[i];
+            }
+            dgv.Columns[0].Visible = false;
         }
 
         private void caricaCmbProdotto()
@@ -96,6 +112,77 @@ namespace VetrinaDigitale.View
             nudQta.Minimum = 1;
             nudQta.Maximum = qta;
             lblQtaDisponibile.Text = "Quantità disponibile: " + qta;
+        }
+
+        private void btnAggiungi_Click(object sender, EventArgs e)
+        {
+            if (cmbProdotto.SelectedIndex > -1 &&
+                cmbTaglia.SelectedIndex > -1 &&
+                cmbColore.SelectedIndex > -1)
+            {
+                int idProdotto = Convert.ToInt32(cmbProdotto.SelectedValue);
+                int idTaglia = Convert.ToInt32(cmbTaglia.SelectedValue);
+                int idColore = Convert.ToInt32(cmbColore.SelectedValue);
+                int qta = Convert.ToInt32(nudQta.Value);
+
+
+                int idVariante = venditeController.GetIdVariante(idProdotto, idTaglia, idColore);
+                int quantitaDisponibile = venditeController.GetQuantitaDisponibile(idVariante);
+                double prezzo = venditeController.GetPrezzo(idProdotto);
+
+                if (qta > quantitaDisponibile)
+                {
+                    MessageBox.Show("Quantità non disponibile");
+                    return;
+                }
+
+                foreach (DataGridViewRow row in dgvScontrino.Rows)
+                {
+                    if ((int)row.Cells["idVariante"].Value == idVariante)
+                    {
+                        int qtaAttuale = Convert.ToInt32(row.Cells["Quantita"].Value);
+                        int nuovaQta = qtaAttuale + qta;
+
+                        if (nuovaQta > quantitaDisponibile)
+                        {
+                            MessageBox.Show("Supera disponibilità");
+                            return;
+                        }
+
+                        row.Cells["Quantita"].Value = nuovaQta;
+                        row.Cells["Totale"].Value = nuovaQta * prezzo;
+                        aggiornaTotale();
+                        return;
+                    }
+                }
+
+                dgvScontrino.Rows.Add(
+                    idVariante,
+                    cmbProdotto.Text,
+                    cmbTaglia.Text,
+                    cmbColore.Text,
+                    qta,
+                    qta * prezzo
+                );
+
+                dgvScontrino.AutoResizeRows();
+                dgvScontrino.AutoResizeColumns();
+
+                aggiornaTotale();
+            }
+        }
+
+        private void aggiornaTotale()
+        {
+            double totale = 0;
+
+            foreach (DataGridViewRow row in dgvScontrino.Rows)
+            {
+                if (row.Cells["Totale"].Value != null)
+                    totale += Convert.ToDouble(row.Cells["Totale"].Value);
+            }
+
+            lblTotale.Text = "Totale: € " + totale.ToString("0.00");
         }
     }
 }

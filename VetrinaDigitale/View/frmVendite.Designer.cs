@@ -173,7 +173,7 @@
             // lblQtaDisponibile
             // 
             this.lblQtaDisponibile.AutoSize = true;
-            this.lblQtaDisponibile.Location = new System.Drawing.Point(258, 225);
+            this.lblQtaDisponibile.Location = new System.Drawing.Point(100, 253);
             this.lblQtaDisponibile.Name = "lblQtaDisponibile";
             this.lblQtaDisponibile.Size = new System.Drawing.Size(42, 16);
             this.lblQtaDisponibile.TabIndex = 12;
@@ -181,12 +181,13 @@
             // 
             // btnAggiungi
             // 
-            this.btnAggiungi.Location = new System.Drawing.Point(69, 264);
+            this.btnAggiungi.Location = new System.Drawing.Point(69, 291);
             this.btnAggiungi.Name = "btnAggiungi";
             this.btnAggiungi.Size = new System.Drawing.Size(109, 31);
             this.btnAggiungi.TabIndex = 13;
             this.btnAggiungi.Text = "AGGIUNGI";
             this.btnAggiungi.UseVisualStyleBackColor = true;
+            this.btnAggiungi.Click += new System.EventHandler(this.btnAggiungi_Click);
             // 
             // dgvScontrino
             // 
@@ -195,12 +196,12 @@
             this.dgvScontrino.AllowUserToResizeColumns = false;
             this.dgvScontrino.AllowUserToResizeRows = false;
             this.dgvScontrino.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvScontrino.Location = new System.Drawing.Point(447, 91);
+            this.dgvScontrino.Location = new System.Drawing.Point(300, 72);
             this.dgvScontrino.Name = "dgvScontrino";
             this.dgvScontrino.ReadOnly = true;
             this.dgvScontrino.RowHeadersWidth = 51;
             this.dgvScontrino.RowTemplate.Height = 24;
-            this.dgvScontrino.Size = new System.Drawing.Size(240, 150);
+            this.dgvScontrino.Size = new System.Drawing.Size(488, 179);
             this.dgvScontrino.TabIndex = 14;
             // 
             // lblTotale

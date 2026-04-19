@@ -138,5 +138,61 @@ namespace VetrinaDigitale.Controller
             }
             return quantita;
         }
+
+        public int GetQuantitaDisponibile(int idVariante)
+        {
+            int quantita;
+            DataTable dt = new DataTable();
+            string query = "SELECT quantitaDisponibile FROM VARIANTI_PRODOTTO WHERE idVariante = @idVariante";
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = query;
+            cmd.Parameters.AddWithValue("@idVariante", idVariante);
+            try
+            {
+                quantita = Convert.ToInt32(ado.EseguiScalar(cmd));
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Errore durante il caricamento della quantità disponibile: " + ex.Message);
+            }
+            return quantita;
+        }
+
+        public int GetIdVariante(int idProdotto, int idTaglia, int idColore)
+        {
+            string query = "SELECT idVariante FROM VARIANTI_PRODOTTO WHERE idProdotto = @idProdotto AND idTaglia = @idTaglia AND idColore = @idColore";
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = query;
+            cmd.Parameters.AddWithValue("@idProdotto", idProdotto);
+            cmd.Parameters.AddWithValue("@idTaglia", idTaglia);
+            cmd.Parameters.AddWithValue("@idColore", idColore);
+            try
+            {
+                return Convert.ToInt32(ado.EseguiScalar(cmd));
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Errore durante il caricamento dell'id variante: " + ex.Message);
+            }
+        }
+
+        public double GetPrezzo(int idProdotto)
+        {
+            string query = "SELECT prezzo FROM PRODOTTI WHERE idProdotto = @idProdotto";
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = query;
+            cmd.Parameters.AddWithValue("@idProdotto", idProdotto);
+            try
+            {
+                return Convert.ToDouble(ado.EseguiScalar(cmd));
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Errore durante il caricamento del prezzo: " + ex.Message);
+            }
+        }
     }
 }
