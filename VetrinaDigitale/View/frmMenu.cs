@@ -53,5 +53,11 @@ namespace VetrinaDigitale.View
             frmMarche frmMarche = new frmMarche();
             frmMarche.Show();
         }
+
+        private void btnCategorie_Click(object sender, EventArgs e)
+        {
+            frmCategorie frmCategorie = new frmCategorie();
+            frmCategorie.Show();
+        }
     }
 }

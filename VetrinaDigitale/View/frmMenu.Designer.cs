@@ -118,6 +118,7 @@
             this.btnCategorie.TabIndex = 7;
             this.btnCategorie.Text = "CATEGORIE";
             this.btnCategorie.UseVisualStyleBackColor = true;
+            this.btnCategorie.Click += new System.EventHandler(this.btnCategorie_Click);
             // 
             // btnTaglie
             // 
