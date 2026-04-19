@@ -128,6 +128,7 @@
             this.btnTaglie.TabIndex = 8;
             this.btnTaglie.Text = "TAGLIE";
             this.btnTaglie.UseVisualStyleBackColor = true;
+            this.btnTaglie.Click += new System.EventHandler(this.btnTaglie_Click);
             // 
             // btnColori
             // 
@@ -137,6 +138,7 @@
             this.btnColori.TabIndex = 9;
             this.btnColori.Text = "COLORI";
             this.btnColori.UseVisualStyleBackColor = true;
+            this.btnColori.Click += new System.EventHandler(this.btnColori_Click);
             // 
             // frmMenu
             // 

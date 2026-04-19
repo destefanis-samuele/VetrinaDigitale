@@ -59,5 +59,17 @@ namespace VetrinaDigitale.View
             frmCategorie frmCategorie = new frmCategorie();
             frmCategorie.Show();
         }
+
+        private void btnTaglie_Click(object sender, EventArgs e)
+        {
+            frmTaglie frmTaglie = new frmTaglie();
+            frmTaglie.Show();
+        }
+
+        private void btnColori_Click(object sender, EventArgs e)
+        {
+            frmColori frmColori = new frmColori();
+            frmColori.Show();
+        }
     }
 }

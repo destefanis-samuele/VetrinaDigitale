@@ -64,11 +64,13 @@
     <Compile Include="App_Code\ADOSQLServer2017.cs" />
     <Compile Include="Controller\clsCategorieController.cs" />
     <Compile Include="Controller\clsClientiController.cs" />
+    <Compile Include="Controller\clsColoriController.cs" />
     <Compile Include="Controller\clsFornitoriController.cs" />
     <Compile Include="Controller\clsGeneriController.cs" />
     <Compile Include="Controller\clsLoginController.cs" />
     <Compile Include="Controller\clsMagazzinoController.cs" />
     <Compile Include="Controller\clsMarcheController.cs" />
+    <Compile Include="Controller\clsTaglieController.cs" />
     <Compile Include="Controller\clsVenditeController.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -88,6 +90,12 @@
     </Compile>
     <Compile Include="View\frmClienti.Designer.cs">
       <DependentUpon>frmClienti.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\frmColori.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmColori.Designer.cs">
+      <DependentUpon>frmColori.cs</DependentUpon>
     </Compile>
     <Compile Include="View\frmFornitori.cs">
       <SubType>Form</SubType>
@@ -125,6 +133,12 @@
     <Compile Include="View\frmMenu.Designer.cs">
       <DependentUpon>frmMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\frmTaglie.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmTaglie.Designer.cs">
+      <DependentUpon>frmTaglie.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\frmVendite.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -141,6 +155,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\frmClienti.resx">
       <DependentUpon>frmClienti.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmColori.resx">
+      <DependentUpon>frmColori.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\frmFornitori.resx">
       <DependentUpon>frmFornitori.cs</DependentUpon>
@@ -159,6 +176,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\frmMenu.resx">
       <DependentUpon>frmMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmTaglie.resx">
+      <DependentUpon>frmTaglie.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\frmVendite.resx">
       <DependentUpon>frmVendite.cs</DependentUpon>
