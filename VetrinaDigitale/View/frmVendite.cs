@@ -32,11 +32,10 @@ namespace VetrinaDigitale.View
 
             caricaCmbPagamanto();
 
-            string dataVendita = DateTime.Now.ToString("dd/MM/yyyy");
-
             caricaCmbProdotto();
 
-            impostaDgvScontrino(dgvScontrino, "idVariante;Prodotto;Taglia;Colore;Quantità;Totale", "idVariante;Prodotto;Taglia;Colore;Quantita;Totale");
+            impostaDgvScontrino(dgvScontrino, "idVariante;Prodotto;Taglia;Colore;Quantità;Prezzo;Totale", "idVariante;Prodotto;Taglia;Colore;Quantita;Prezzo;Totale");
+
             lblTotale.Text = "";
         }
 
@@ -57,10 +56,11 @@ namespace VetrinaDigitale.View
         {
             cmbProdotto.DataSource = null;
             DataTable dt = venditeController.GetAllProdottiDisponibili();
-            cmbProdotto.DisplayMember = "nomeCompleto";
+            cmbProdotto.DisplayMember = "nome";
             cmbProdotto.ValueMember = "idProdotto";
             cmbProdotto.DataSource = dt;
             cmbProdotto.SelectedIndex = 0;
+            idProdotto = Convert.ToInt32(cmbProdotto.SelectedValue);
         }
 
         private void caricaCmbPagamanto()
@@ -74,9 +74,17 @@ namespace VetrinaDigitale.View
         private void caricaCmbCliente()
         {
             cmbCliente.DataSource = null;
-            cmbCliente.DataSource = venditeController.GetAllClienti();
+            DataTable dt = venditeController.GetAllClienti();
+
+            DataRow riga = dt.NewRow();
+            riga["idCliente"] = 0;
+            riga["cliente"] = "";
+            dt.Rows.InsertAt(riga, 0);
+
             cmbCliente.DisplayMember = "cliente";
             cmbCliente.ValueMember = "idCliente";
+            cmbCliente.DataSource = dt;
+            cmbCliente.SelectedIndex = 0;
         }
 
         private void cmbProdotto_SelectedIndexChanged(object sender, EventArgs e)
@@ -87,6 +95,8 @@ namespace VetrinaDigitale.View
             cmbTaglia.DisplayMember = "taglia";
             cmbTaglia.ValueMember = "idTaglia";
             cmbTaglia.DataSource = dt;
+
+            lblPrezzo.Text = "Prezzo: € " + venditeController.GetPrezzo(idProdotto).ToString("0.00");
         }
 
         private void cmbTaglia_SelectedIndexChanged(object sender, EventArgs e)
@@ -120,9 +130,6 @@ namespace VetrinaDigitale.View
                 cmbTaglia.SelectedIndex > -1 &&
                 cmbColore.SelectedIndex > -1)
             {
-                int idProdotto = Convert.ToInt32(cmbProdotto.SelectedValue);
-                int idTaglia = Convert.ToInt32(cmbTaglia.SelectedValue);
-                int idColore = Convert.ToInt32(cmbColore.SelectedValue);
                 int qta = Convert.ToInt32(nudQta.Value);
 
 
@@ -151,7 +158,7 @@ namespace VetrinaDigitale.View
 
                         row.Cells["Quantita"].Value = nuovaQta;
                         row.Cells["Totale"].Value = nuovaQta * prezzo;
-                        aggiornaTotale();
+                        lblTotale.Text = "Totale: € " + calcolaTotale().ToString("0.00");
                         return;
                     }
                 }
@@ -162,17 +169,49 @@ namespace VetrinaDigitale.View
                     cmbTaglia.Text,
                     cmbColore.Text,
                     qta,
+                    prezzo,
                     qta * prezzo
                 );
 
                 dgvScontrino.AutoResizeRows();
                 dgvScontrino.AutoResizeColumns();
 
-                aggiornaTotale();
+                lblTotale.Text = "Totale: € " + calcolaTotale().ToString("0.00");
             }
         }
 
-        private void aggiornaTotale()
+        private void btnConferma_Click(object sender, EventArgs e)
+        {
+            if (dgvScontrino.Rows.Count == 0)
+            {
+                MessageBox.Show("Aggiungi almeno un prodotto");
+                return;
+            }
+            
+            int? idCliente = null;
+
+            if (cmbCliente.SelectedIndex > 0)
+                idCliente = Convert.ToInt32(cmbCliente.SelectedValue);
+
+            int idMetodoPagamento = Convert.ToInt32(cmbMetodoPagamento.SelectedValue);
+            double totale = calcolaTotale();
+            int idScontrino = venditeController.InserisciScontrino(idCliente, idMetodoPagamento, totale);
+            
+            foreach (DataGridViewRow row in dgvScontrino.Rows)
+            {
+                int idVariante = Convert.ToInt32(row.Cells["idVariante"].Value);
+                int quantita = Convert.ToInt32(row.Cells["Quantita"].Value);
+                double prezzo = Convert.ToDouble(row.Cells["Prezzo"].Value);
+
+                venditeController.InserisciRigaScontrino(idScontrino, idVariante, quantita, prezzo);
+
+                venditeController.AggiornaQuantitaMagazzino(idVariante, quantita);
+            }
+
+            resetTotale();
+        }
+
+        private double calcolaTotale()
         {
             double totale = 0;
 
@@ -181,8 +220,18 @@ namespace VetrinaDigitale.View
                 if (row.Cells["Totale"].Value != null)
                     totale += Convert.ToDouble(row.Cells["Totale"].Value);
             }
-
-            lblTotale.Text = "Totale: € " + totale.ToString("0.00");
+            return totale;
         }
+        private void resetTotale()
+        {
+            lblTotale.Text = "";
+            dgvScontrino.Rows.Clear();
+            caricaCmbProdotto();
+            nudQta.Value = 1;
+            cmbTaglia.DataSource = null;
+            cmbColore.DataSource = null;
+            lblQtaDisponibile.Text = "";
+        }
+
     }
 }

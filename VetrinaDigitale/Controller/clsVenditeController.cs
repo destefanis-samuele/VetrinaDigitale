@@ -62,7 +62,7 @@ namespace VetrinaDigitale.Controller
         public DataTable GetAllProdottiDisponibili()
         {
             DataTable dt = new DataTable();
-            string query = "SELECT idProdotto, nome + ' - €' + CAST(prezzo AS VARCHAR) AS nomeCompleto FROM PRODOTTI WHERE attivo = 1 ORDER BY nomeCompleto";
+            string query = "SELECT idProdotto, nome FROM PRODOTTI WHERE attivo = 1 ORDER BY nome";
 
             SqlCommand cmd = new SqlCommand();
             cmd.CommandType = CommandType.Text;
@@ -193,6 +193,41 @@ namespace VetrinaDigitale.Controller
             {
                 throw new Exception("Errore durante il caricamento del prezzo: " + ex.Message);
             }
+        }
+
+        public int InserisciScontrino(int? idCliente, int idMetodoPagamento, double totale)
+        {
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "INSERT INTO SCONTRINI (dataVendita, oraVendita, idCliente, idMetodo, totale) VALUES (GETDATE(), GETDATE(), @idCliente, @idMetodoPagamento, @totale); SELECT SCOPE_IDENTITY();";
+            cmd.Parameters.AddWithValue("@idCliente", (object)idCliente ?? DBNull.Value);
+            cmd.Parameters.AddWithValue("@idMetodoPagamento", idMetodoPagamento);
+            cmd.Parameters.AddWithValue("@totale", totale);
+            return Convert.ToInt32(ado.EseguiScalar(cmd));
+        }
+
+        public void InserisciRigaScontrino(int idScontrino, int idVariante, int quantita, double prezzo)
+        {
+            string query = "INSERT INTO RIGHE_SCONTRINO (idScontrino, idVariante, quantita, prezzoUnitario) VALUES (@idScontrino, @idVariante, @quantita, @prezzo)";
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = query;
+            cmd.Parameters.AddWithValue("@idScontrino", idScontrino);
+            cmd.Parameters.AddWithValue("@idVariante", idVariante);
+            cmd.Parameters.AddWithValue("@quantita", quantita);
+            cmd.Parameters.AddWithValue("@prezzo", prezzo);
+            ado.EseguiNonQuery(cmd);
+        }
+
+        public void AggiornaQuantitaMagazzino(int idVariante, int quantita)
+        {
+            string query = "UPDATE VARIANTI_PRODOTTO SET quantitaDisponibile = quantitaDisponibile - @quantita WHERE idVariante = @idVariante";
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = query;
+            cmd.Parameters.AddWithValue("@idVariante", idVariante);
+            cmd.Parameters.AddWithValue("@quantita", quantita);
+            ado.EseguiNonQuery(cmd);
         }
     }
 }

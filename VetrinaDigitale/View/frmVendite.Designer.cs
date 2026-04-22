@@ -46,6 +46,7 @@
             this.dgvScontrino = new System.Windows.Forms.DataGridView();
             this.lblTotale = new System.Windows.Forms.Label();
             this.btnConferma = new System.Windows.Forms.Button();
+            this.lblPrezzo = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.nudQta)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvScontrino)).BeginInit();
             this.SuspendLayout();
@@ -109,7 +110,7 @@
             // 
             this.cmbTaglia.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbTaglia.FormattingEnabled = true;
-            this.cmbTaglia.Location = new System.Drawing.Point(121, 129);
+            this.cmbTaglia.Location = new System.Drawing.Point(121, 158);
             this.cmbTaglia.Name = "cmbTaglia";
             this.cmbTaglia.Size = new System.Drawing.Size(158, 24);
             this.cmbTaglia.TabIndex = 7;
@@ -118,7 +119,7 @@
             // lblTaglia
             // 
             this.lblTaglia.AutoSize = true;
-            this.lblTaglia.Location = new System.Drawing.Point(27, 129);
+            this.lblTaglia.Location = new System.Drawing.Point(27, 158);
             this.lblTaglia.Name = "lblTaglia";
             this.lblTaglia.Size = new System.Drawing.Size(49, 16);
             this.lblTaglia.TabIndex = 6;
@@ -128,7 +129,7 @@
             // 
             this.cmbColore.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbColore.FormattingEnabled = true;
-            this.cmbColore.Location = new System.Drawing.Point(121, 175);
+            this.cmbColore.Location = new System.Drawing.Point(121, 204);
             this.cmbColore.Name = "cmbColore";
             this.cmbColore.Size = new System.Drawing.Size(158, 24);
             this.cmbColore.TabIndex = 9;
@@ -137,7 +138,7 @@
             // lblColore
             // 
             this.lblColore.AutoSize = true;
-            this.lblColore.Location = new System.Drawing.Point(27, 175);
+            this.lblColore.Location = new System.Drawing.Point(27, 204);
             this.lblColore.Name = "lblColore";
             this.lblColore.Size = new System.Drawing.Size(50, 16);
             this.lblColore.TabIndex = 8;
@@ -146,7 +147,7 @@
             // lblQta
             // 
             this.lblQta.AutoSize = true;
-            this.lblQta.Location = new System.Drawing.Point(26, 221);
+            this.lblQta.Location = new System.Drawing.Point(26, 250);
             this.lblQta.Name = "lblQta";
             this.lblQta.Size = new System.Drawing.Size(59, 16);
             this.lblQta.TabIndex = 10;
@@ -154,7 +155,7 @@
             // 
             // nudQta
             // 
-            this.nudQta.Location = new System.Drawing.Point(121, 219);
+            this.nudQta.Location = new System.Drawing.Point(121, 248);
             this.nudQta.Minimum = new decimal(new int[] {
             1,
             0,
@@ -173,7 +174,7 @@
             // lblQtaDisponibile
             // 
             this.lblQtaDisponibile.AutoSize = true;
-            this.lblQtaDisponibile.Location = new System.Drawing.Point(100, 253);
+            this.lblQtaDisponibile.Location = new System.Drawing.Point(100, 282);
             this.lblQtaDisponibile.Name = "lblQtaDisponibile";
             this.lblQtaDisponibile.Size = new System.Drawing.Size(42, 16);
             this.lblQtaDisponibile.TabIndex = 12;
@@ -181,7 +182,7 @@
             // 
             // btnAggiungi
             // 
-            this.btnAggiungi.Location = new System.Drawing.Point(69, 291);
+            this.btnAggiungi.Location = new System.Drawing.Point(69, 320);
             this.btnAggiungi.Name = "btnAggiungi";
             this.btnAggiungi.Size = new System.Drawing.Size(109, 31);
             this.btnAggiungi.TabIndex = 13;
@@ -221,12 +222,23 @@
             this.btnConferma.TabIndex = 16;
             this.btnConferma.Text = "CONFERMA";
             this.btnConferma.UseVisualStyleBackColor = true;
+            this.btnConferma.Click += new System.EventHandler(this.btnConferma_Click);
+            // 
+            // lblPrezzo
+            // 
+            this.lblPrezzo.AutoSize = true;
+            this.lblPrezzo.Location = new System.Drawing.Point(118, 123);
+            this.lblPrezzo.Name = "lblPrezzo";
+            this.lblPrezzo.Size = new System.Drawing.Size(42, 16);
+            this.lblPrezzo.TabIndex = 17;
+            this.lblPrezzo.Text = "prova";
             // 
             // frmVendite
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lblPrezzo);
             this.Controls.Add(this.btnConferma);
             this.Controls.Add(this.lblTotale);
             this.Controls.Add(this.dgvScontrino);
@@ -274,5 +286,6 @@
         private System.Windows.Forms.DataGridView dgvScontrino;
         private System.Windows.Forms.Label lblTotale;
         private System.Windows.Forms.Button btnConferma;
+        private System.Windows.Forms.Label lblPrezzo;
     }
 }
