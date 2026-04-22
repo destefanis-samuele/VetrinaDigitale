@@ -34,6 +34,7 @@ namespace VetrinaDigitale.View
         {
             dgvClienti.DataSource = null;
             dgvClienti.DataSource = clientiController.GetAllClienti();
+            dgvClienti.Columns["idCliente"].Visible = false;
             dgvClienti.Columns["idCitta"].Visible = false;
             dgvClienti.AutoResizeColumns();
             dgvClienti.AutoResizeRows();
@@ -62,17 +63,66 @@ namespace VetrinaDigitale.View
 
         private void btnNuovo_Click(object sender, EventArgs e)
         {
-
+            if (!clientiController.ControllaCliente(txtCognome.Text, txtNome.Text, txtEmail.Text, txtTelefono.Text, (int)cmbCitta.SelectedValue))
+            {
+                clientiController.InserisciCliente(txtCognome.Text, txtNome.Text, txtEmail.Text, txtTelefono.Text, (int)cmbCitta.SelectedValue);
+                Reset();
+            }
+            else
+                MessageBox.Show("Il cliente è già presente nel database.", "Attenzione", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
+
 
         private void btnSalva_Click(object sender, EventArgs e)
         {
-            //int idCitta = (int)cmbCitta.SelectedValue;
+            if (dgvClienti.CurrentRow == null)
+            {
+                MessageBox.Show("Seleziona un cliente da modificare.", "Attenzione", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (!clientiController.ControllaCliente(txtCognome.Text, txtNome.Text, txtEmail.Text, txtTelefono.Text, (int)cmbCitta.SelectedValue))
+            {
+                int idCliente = Convert.ToInt32(dgvClienti.CurrentRow.Cells["idCliente"].Value);
+                clientiController.AggiornaCliente(idCliente, txtCognome.Text, txtNome.Text, txtEmail.Text, txtTelefono.Text, (int)cmbCitta.SelectedValue);
+                Reset();
+            }
+            else
+                MessageBox.Show("Il cliente è già presente nel database.", "Attenzione", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
 
         private void btnElimina_Click(object sender, EventArgs e)
         {
+            if (dgvClienti.CurrentRow == null)
+            {
+                MessageBox.Show("Seleziona un cliente da eliminare.", "Attenzione", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            int idCliente = Convert.ToInt32(dgvClienti.CurrentRow.Cells["idCliente"].Value);
+            if (clientiController.ControllaIdCliente(idCliente))
+            {
+                if (MessageBox.Show("Sei sicuro di voler eliminare il cliente selezionato?", "Conferma eliminazione", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    clientiController.EliminaCliente(idCliente);
+                    Reset();
+                }
+            }
+        }
 
+        private void Reset()
+        {
+            caricaDgvClienti();
+            txtCognome.Text = "";
+            txtNome.Text = "";
+            txtEmail.Text = "";
+            txtTelefono.Text = "";
+            cmbCitta.SelectedIndex = 0;
+        }
+
+        private void btnAggiungiCitta_Click(object sender, EventArgs e)
+        {
+            frmCitta frmCitta = new frmCitta();
+            frmCitta.ShowDialog();
+            caricaCmbCitta();
         }
     }
 }

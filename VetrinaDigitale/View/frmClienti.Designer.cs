@@ -43,6 +43,7 @@
             this.btnNuovo = new System.Windows.Forms.Button();
             this.btnSalva = new System.Windows.Forms.Button();
             this.btnElimina = new System.Windows.Forms.Button();
+            this.btnAggiungiCitta = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClienti)).BeginInit();
             this.SuspendLayout();
             // 
@@ -174,11 +175,22 @@
             this.btnElimina.UseVisualStyleBackColor = true;
             this.btnElimina.Click += new System.EventHandler(this.btnElimina_Click);
             // 
+            // btnAggiungiCitta
+            // 
+            this.btnAggiungiCitta.Location = new System.Drawing.Point(235, 441);
+            this.btnAggiungiCitta.Name = "btnAggiungiCitta";
+            this.btnAggiungiCitta.Size = new System.Drawing.Size(138, 51);
+            this.btnAggiungiCitta.TabIndex = 14;
+            this.btnAggiungiCitta.Text = "AGGIUNGI CITTA\'";
+            this.btnAggiungiCitta.UseVisualStyleBackColor = true;
+            this.btnAggiungiCitta.Click += new System.EventHandler(this.btnAggiungiCitta_Click);
+            // 
             // frmClienti
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 518);
+            this.Controls.Add(this.btnAggiungiCitta);
             this.Controls.Add(this.btnElimina);
             this.Controls.Add(this.btnSalva);
             this.Controls.Add(this.btnNuovo);
@@ -219,5 +231,6 @@
         private System.Windows.Forms.Button btnNuovo;
         private System.Windows.Forms.Button btnSalva;
         private System.Windows.Forms.Button btnElimina;
+        private System.Windows.Forms.Button btnAggiungiCitta;
     }
 }

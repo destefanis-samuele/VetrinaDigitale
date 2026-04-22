@@ -63,6 +63,7 @@
   <ItemGroup>
     <Compile Include="App_Code\ADOSQLServer2017.cs" />
     <Compile Include="Controller\clsCategorieController.cs" />
+    <Compile Include="Controller\clsCittaController.cs" />
     <Compile Include="Controller\clsClientiController.cs" />
     <Compile Include="Controller\clsColoriController.cs" />
     <Compile Include="Controller\clsFornitoriController.cs" />
@@ -84,6 +85,12 @@
     </Compile>
     <Compile Include="View\frmCategorie.Designer.cs">
       <DependentUpon>frmCategorie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\frmCitta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmCitta.Designer.cs">
+      <DependentUpon>frmCitta.cs</DependentUpon>
     </Compile>
     <Compile Include="View\frmClienti.cs">
       <SubType>Form</SubType>
@@ -152,6 +159,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\frmCategorie.resx">
       <DependentUpon>frmCategorie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmCitta.resx">
+      <DependentUpon>frmCitta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\frmClienti.resx">
       <DependentUpon>frmClienti.cs</DependentUpon>

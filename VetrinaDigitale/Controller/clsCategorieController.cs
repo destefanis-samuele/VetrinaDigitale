@@ -11,7 +11,7 @@ using System.Data.SqlClient;
 
 namespace VetrinaDigitale.Controller
 {
-    internal class clsCategorieController
+    public class clsCategorieController
     {
         private string dbName;
         private ADOSQLServer2017 ado;
