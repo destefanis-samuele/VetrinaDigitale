@@ -47,6 +47,7 @@
             this.lblTotale = new System.Windows.Forms.Label();
             this.btnConferma = new System.Windows.Forms.Button();
             this.lblPrezzo = new System.Windows.Forms.Label();
+            this.txtDescrizione = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.nudQta)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvScontrino)).BeginInit();
             this.SuspendLayout();
@@ -174,15 +175,15 @@
             // lblQtaDisponibile
             // 
             this.lblQtaDisponibile.AutoSize = true;
-            this.lblQtaDisponibile.Location = new System.Drawing.Point(100, 282);
+            this.lblQtaDisponibile.Location = new System.Drawing.Point(91, 279);
             this.lblQtaDisponibile.Name = "lblQtaDisponibile";
-            this.lblQtaDisponibile.Size = new System.Drawing.Size(42, 16);
+            this.lblQtaDisponibile.Size = new System.Drawing.Size(128, 16);
             this.lblQtaDisponibile.TabIndex = 12;
-            this.lblQtaDisponibile.Text = "prova";
+            this.lblQtaDisponibile.Text = "Quantità disponibile:";
             // 
             // btnAggiungi
             // 
-            this.btnAggiungi.Location = new System.Drawing.Point(69, 320);
+            this.btnAggiungi.Location = new System.Drawing.Point(94, 410);
             this.btnAggiungi.Name = "btnAggiungi";
             this.btnAggiungi.Size = new System.Drawing.Size(109, 31);
             this.btnAggiungi.TabIndex = 13;
@@ -210,9 +211,9 @@
             this.lblTotale.AutoSize = true;
             this.lblTotale.Location = new System.Drawing.Point(495, 279);
             this.lblTotale.Name = "lblTotale";
-            this.lblTotale.Size = new System.Drawing.Size(42, 16);
+            this.lblTotale.Size = new System.Drawing.Size(49, 16);
             this.lblTotale.TabIndex = 15;
-            this.lblTotale.Text = "prova";
+            this.lblTotale.Text = "Totale:";
             // 
             // btnConferma
             // 
@@ -229,15 +230,25 @@
             this.lblPrezzo.AutoSize = true;
             this.lblPrezzo.Location = new System.Drawing.Point(118, 123);
             this.lblPrezzo.Name = "lblPrezzo";
-            this.lblPrezzo.Size = new System.Drawing.Size(42, 16);
+            this.lblPrezzo.Size = new System.Drawing.Size(51, 16);
             this.lblPrezzo.TabIndex = 17;
-            this.lblPrezzo.Text = "prova";
+            this.lblPrezzo.Text = "Prezzo:";
+            // 
+            // txtDescrizione
+            // 
+            this.txtDescrizione.Location = new System.Drawing.Point(23, 315);
+            this.txtDescrizione.Multiline = true;
+            this.txtDescrizione.Name = "txtDescrizione";
+            this.txtDescrizione.ReadOnly = true;
+            this.txtDescrizione.Size = new System.Drawing.Size(256, 70);
+            this.txtDescrizione.TabIndex = 18;
             // 
             // frmVendite
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 463);
+            this.Controls.Add(this.txtDescrizione);
             this.Controls.Add(this.lblPrezzo);
             this.Controls.Add(this.btnConferma);
             this.Controls.Add(this.lblTotale);
@@ -287,5 +298,6 @@
         private System.Windows.Forms.Label lblTotale;
         private System.Windows.Forms.Button btnConferma;
         private System.Windows.Forms.Label lblPrezzo;
+        private System.Windows.Forms.TextBox txtDescrizione;
     }
 }

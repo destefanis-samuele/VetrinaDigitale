@@ -97,7 +97,9 @@ namespace VetrinaDigitale.View
             cmbTaglia.DataSource = dt;
 
             lblPrezzo.Text = "Prezzo: € " + venditeController.GetPrezzo(idProdotto).ToString("0.00");
+            caricaDescrizione(idProdotto);
         }
+
 
         private void cmbTaglia_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -114,6 +116,10 @@ namespace VetrinaDigitale.View
             idColore = Convert.ToInt32(cmbColore.SelectedValue);
 
             caricaDisponibilita();
+        }
+        private void caricaDescrizione(int idProdotto)
+        {
+            txtDescrizione.Text = venditeController.GetDescrizione(idProdotto);
         }
 
         private void caricaDisponibilita()

@@ -229,5 +229,23 @@ namespace VetrinaDigitale.Controller
             cmd.Parameters.AddWithValue("@quantita", quantita);
             ado.EseguiNonQuery(cmd);
         }
+
+        public string GetDescrizione(int idProdotto)
+        {
+            string query = "SELECT descrizione FROM PRODOTTI WHERE idProdotto = @idProdotto";
+            SqlCommand cmd = new SqlCommand();
+            cmd = new SqlCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = query;
+            cmd.Parameters.AddWithValue("@idProdotto", idProdotto);
+            try
+            {
+                return Convert.ToString(ado.EseguiScalar(cmd));
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Errore durante il caricamento della descrizione: " + ex.Message);
+            }
+        }
     }
 }
