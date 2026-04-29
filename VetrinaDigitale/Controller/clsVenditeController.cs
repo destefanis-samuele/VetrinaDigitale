@@ -97,14 +97,15 @@ namespace VetrinaDigitale.Controller
             return dt;
         }
 
-        public DataTable GetColoriByTaglia(int idTaglia)
+        public DataTable GetColoriByTaglia(int idTaglia, int idProdotto)
         {
             DataTable dt = new DataTable();
-            string query = "SELECT VARIANTI_PRODOTTO.idColore, colore FROM VARIANTI_PRODOTTO, COLORI WHERE VARIANTI_PRODOTTO.idColore = COLORI.idColore AND idTaglia = @idTaglia";
+            string query = "SELECT DISTINCT VARIANTI_PRODOTTO.idColore, colore FROM VARIANTI_PRODOTTO, COLORI WHERE VARIANTI_PRODOTTO.idColore = COLORI.idColore AND idTaglia = @idTaglia AND idProdotto = @idProdotto";
             SqlCommand cmd = new SqlCommand();
             cmd.CommandType = CommandType.Text;
             cmd.CommandText = query;
             cmd.Parameters.AddWithValue("@idTaglia", idTaglia);
+            cmd.Parameters.AddWithValue("@idProdotto", idProdotto);
             try
             {
                 dt = ado.EseguiQuery(cmd);

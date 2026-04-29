@@ -105,7 +105,7 @@ namespace VetrinaDigitale.View
         {
             idTaglia = Convert.ToInt32(cmbTaglia.SelectedValue);
             cmbColore.DataSource = null;
-            DataTable dt = venditeController.GetColoriByTaglia(idTaglia);
+            DataTable dt = venditeController.GetColoriByTaglia(idTaglia, idProdotto);
             cmbColore.DisplayMember = "colore";
             cmbColore.ValueMember = "idColore";
             cmbColore.DataSource = dt;
