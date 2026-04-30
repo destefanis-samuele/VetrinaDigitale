@@ -18,8 +18,11 @@ namespace VetrinaDigitale.View
 
         private string nomeId;
         private string nomeCampo;
+        private string tabellaControllo;
 
-        public frmBaseGenerica(string tabella, string campo, string id, string titolo)
+        private string campoControllo;
+
+        public frmBaseGenerica(string tabella, string campo, string id, string titolo, string tabellaCtrl, string campoCtrl)
         {
             InitializeComponent();
 
@@ -28,7 +31,11 @@ namespace VetrinaDigitale.View
             nomeId = id;
             nomeCampo = campo;
 
+            tabellaControllo = tabellaCtrl;
+            campoControllo = campoCtrl;
+
             Text = titolo;
+            lblNome.Text = $"{nomeCampo}:";
         }
 
         private void frmBaseGenerica_Load(object sender, EventArgs e)
@@ -58,6 +65,7 @@ namespace VetrinaDigitale.View
             {
                 controller.Inserisci(valore);
                 Reset();
+                MessageBox.Show($"{nomeCampo} inserito con successo.", "Inserimento riuscito", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
@@ -86,6 +94,7 @@ namespace VetrinaDigitale.View
                 int id = Convert.ToInt32(dgvDati.CurrentRow.Cells[nomeId].Value);
                 controller.Aggiorna(id, valore);
                 Reset();
+                MessageBox.Show($"{nomeCampo} aggiornato con successo.", "Modifica riuscita", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
@@ -107,8 +116,14 @@ namespace VetrinaDigitale.View
 
             if (res == DialogResult.Yes)
             {
-                controller.Elimina(id);
-                Reset();
+                if (!controller.Presente(tabellaControllo, campoControllo, id))
+                {
+                    controller.Elimina(id);
+                    Reset();
+                    MessageBox.Show($"{nomeCampo} eliminato con successo.", "Eliminazione riuscita", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                    MessageBox.Show("Non è possibile eliminare questo elemento perché è associato a uno o più record in un'altra tabella.");
             }
         }
 

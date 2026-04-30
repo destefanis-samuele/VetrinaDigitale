@@ -89,5 +89,17 @@ namespace VetrinaDigitale.Controller
 
             ado.EseguiNonQuery(cmd);
         }
+
+        public bool Presente(string tabellaControllo, string campoControllo, int id)
+        {
+            string query = $"SELECT COUNT(*) FROM {tabellaControllo} WHERE {campoControllo} = @id";
+
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = query;
+            cmd.Parameters.AddWithValue("@id", id);
+
+            return Convert.ToInt32(ado.EseguiScalar(cmd)) > 0;
+        }
     }
 }

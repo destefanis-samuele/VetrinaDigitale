@@ -44,31 +44,31 @@ namespace VetrinaDigitale.View
 
         private void btnGeneri_Click(object sender, EventArgs e)
         {
-            frmBaseGenerica frm = new frmBaseGenerica("GENERI", "genere", "idGenere", "GESTIONE GENERI");
+            frmBaseGenerica frm = new frmBaseGenerica("GENERI", "genere", "idGenere", "GESTIONE GENERI", "PRODOTTI", "idGenere");
             frm.ShowDialog();
         }
 
         private void btnMarche_Click(object sender, EventArgs e)
         {
-            frmBaseGenerica frm = new frmBaseGenerica("MARCHE", "marca", "idMarca", "GESTIONE MARCHE");
+            frmBaseGenerica frm = new frmBaseGenerica("MARCHE", "marca", "idMarca", "GESTIONE MARCHE", "PRODOTTI", "idMarca");
             frm.ShowDialog();
         }
 
         private void btnCategorie_Click(object sender, EventArgs e)
         {
-            frmBaseGenerica frm = new frmBaseGenerica("CATEGORIE", "categoria", "idCategoria", "GESTIONE CATEGORIE");
+            frmBaseGenerica frm = new frmBaseGenerica("CATEGORIE", "categoria", "idCategoria", "GESTIONE CATEGORIE", "PRODOTTI", "idCategoria");
             frm.ShowDialog();
         }
 
         private void btnTaglie_Click(object sender, EventArgs e)
         {
-            frmBaseGenerica frm = new frmBaseGenerica("TAGLIE", "taglia", "idTaglia", "GESTIONE TAGLIE");
+            frmBaseGenerica frm = new frmBaseGenerica("TAGLIE", "taglia", "idTaglia", "GESTIONE TAGLIE", "VARIANTI_PRODOTTO", "idTaglia");
             frm.ShowDialog();
         }
 
         private void btnColori_Click(object sender, EventArgs e)
         {
-            frmBaseGenerica frm = new frmBaseGenerica("COLORI", "colore", "idColore", "GESTIONE COLORI");
+            frmBaseGenerica frm = new frmBaseGenerica("COLORI", "colore", "idColore", "GESTIONE COLORI", "VARIANTI_PRODOTTO", "idColore");
             frm.ShowDialog();
         }
     }
