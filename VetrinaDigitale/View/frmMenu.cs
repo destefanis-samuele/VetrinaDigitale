@@ -44,32 +44,32 @@ namespace VetrinaDigitale.View
 
         private void btnGeneri_Click(object sender, EventArgs e)
         {
-            frmGeneri frmGeneri = new frmGeneri();
-            frmGeneri.Show();
+            frmBaseGenerica frm = new frmBaseGenerica("GENERI", "genere", "idGenere", "GESTIONE GENERI");
+            frm.ShowDialog();
         }
 
         private void btnMarche_Click(object sender, EventArgs e)
         {
-            frmMarche frmMarche = new frmMarche();
-            frmMarche.Show();
+            frmBaseGenerica frm = new frmBaseGenerica("MARCHE", "marca", "idMarca", "GESTIONE MARCHE");
+            frm.ShowDialog();
         }
 
         private void btnCategorie_Click(object sender, EventArgs e)
         {
-            frmCategorie frmCategorie = new frmCategorie();
-            frmCategorie.Show();
+            frmBaseGenerica frm = new frmBaseGenerica("CATEGORIE", "categoria", "idCategoria", "GESTIONE CATEGORIE");
+            frm.ShowDialog();
         }
 
         private void btnTaglie_Click(object sender, EventArgs e)
         {
-            frmTaglie frmTaglie = new frmTaglie();
-            frmTaglie.Show();
+            frmBaseGenerica frm = new frmBaseGenerica("TAGLIE", "taglia", "idTaglia", "GESTIONE TAGLIE");
+            frm.ShowDialog();
         }
 
         private void btnColori_Click(object sender, EventArgs e)
         {
-            frmColori frmColori = new frmColori();
-            frmColori.Show();
+            frmBaseGenerica frm = new frmBaseGenerica("COLORI", "colore", "idColore", "GESTIONE COLORI");
+            frm.ShowDialog();
         }
     }
 }

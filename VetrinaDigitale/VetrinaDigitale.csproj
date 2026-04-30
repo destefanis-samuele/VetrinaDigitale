@@ -62,6 +62,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Code\ADOSQLServer2017.cs" />
+    <Compile Include="Controller\clsBaseController.cs" />
     <Compile Include="Controller\clsCategorieController.cs" />
     <Compile Include="Controller\clsCittaController.cs" />
     <Compile Include="Controller\clsClientiController.cs" />
@@ -79,6 +80,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="View\frmBaseGenerica.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmBaseGenerica.Designer.cs">
+      <DependentUpon>frmBaseGenerica.cs</DependentUpon>
     </Compile>
     <Compile Include="View\frmCategorie.cs">
       <SubType>Form</SubType>
@@ -156,6 +163,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmBaseGenerica.resx">
+      <DependentUpon>frmBaseGenerica.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\frmCategorie.resx">
       <DependentUpon>frmCategorie.cs</DependentUpon>
