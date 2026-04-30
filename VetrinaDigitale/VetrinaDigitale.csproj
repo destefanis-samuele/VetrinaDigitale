@@ -63,16 +63,11 @@
   <ItemGroup>
     <Compile Include="App_Code\ADOSQLServer2017.cs" />
     <Compile Include="Controller\clsBaseController.cs" />
-    <Compile Include="Controller\clsCategorieController.cs" />
     <Compile Include="Controller\clsCittaController.cs" />
     <Compile Include="Controller\clsClientiController.cs" />
-    <Compile Include="Controller\clsColoriController.cs" />
     <Compile Include="Controller\clsFornitoriController.cs" />
-    <Compile Include="Controller\clsGeneriController.cs" />
     <Compile Include="Controller\clsLoginController.cs" />
     <Compile Include="Controller\clsMagazzinoController.cs" />
-    <Compile Include="Controller\clsMarcheController.cs" />
-    <Compile Include="Controller\clsTaglieController.cs" />
     <Compile Include="Controller\clsVenditeController.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -87,12 +82,6 @@
     <Compile Include="View\frmBaseGenerica.Designer.cs">
       <DependentUpon>frmBaseGenerica.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\frmCategorie.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\frmCategorie.Designer.cs">
-      <DependentUpon>frmCategorie.cs</DependentUpon>
-    </Compile>
     <Compile Include="View\frmCitta.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -105,23 +94,11 @@
     <Compile Include="View\frmClienti.Designer.cs">
       <DependentUpon>frmClienti.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\frmColori.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\frmColori.Designer.cs">
-      <DependentUpon>frmColori.cs</DependentUpon>
-    </Compile>
     <Compile Include="View\frmFornitori.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="View\frmFornitori.Designer.cs">
       <DependentUpon>frmFornitori.cs</DependentUpon>
-    </Compile>
-    <Compile Include="View\frmGeneri.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\frmGeneri.Designer.cs">
-      <DependentUpon>frmGeneri.cs</DependentUpon>
     </Compile>
     <Compile Include="View\frmLogin.cs">
       <SubType>Form</SubType>
@@ -135,23 +112,11 @@
     <Compile Include="View\frmMagazzino.Designer.cs">
       <DependentUpon>frmMagazzino.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\frmMarche.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\frmMarche.Designer.cs">
-      <DependentUpon>frmMarche.cs</DependentUpon>
-    </Compile>
     <Compile Include="View\frmMenu.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="View\frmMenu.Designer.cs">
       <DependentUpon>frmMenu.cs</DependentUpon>
-    </Compile>
-    <Compile Include="View\frmTaglie.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\frmTaglie.Designer.cs">
-      <DependentUpon>frmTaglie.cs</DependentUpon>
     </Compile>
     <Compile Include="View\frmVendite.cs">
       <SubType>Form</SubType>
@@ -167,23 +132,14 @@
     <EmbeddedResource Include="View\frmBaseGenerica.resx">
       <DependentUpon>frmBaseGenerica.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\frmCategorie.resx">
-      <DependentUpon>frmCategorie.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="View\frmCitta.resx">
       <DependentUpon>frmCitta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\frmClienti.resx">
       <DependentUpon>frmClienti.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\frmColori.resx">
-      <DependentUpon>frmColori.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="View\frmFornitori.resx">
       <DependentUpon>frmFornitori.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\frmGeneri.resx">
-      <DependentUpon>frmGeneri.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
@@ -191,14 +147,8 @@
     <EmbeddedResource Include="View\frmMagazzino.resx">
       <DependentUpon>frmMagazzino.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\frmMarche.resx">
-      <DependentUpon>frmMarche.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="View\frmMenu.resx">
       <DependentUpon>frmMenu.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\frmTaglie.resx">
-      <DependentUpon>frmTaglie.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\frmVendite.resx">
       <DependentUpon>frmVendite.cs</DependentUpon>
