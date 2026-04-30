@@ -124,6 +124,42 @@
     <Compile Include="View\frmVendite.Designer.cs">
       <DependentUpon>frmVendite.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\ucBaseGenerica.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ucBaseGenerica.Designer.cs">
+      <DependentUpon>ucBaseGenerica.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ucCitta.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ucCitta.Designer.cs">
+      <DependentUpon>ucCitta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ucClienti.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ucClienti.Designer.cs">
+      <DependentUpon>ucClienti.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ucFornitori.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ucFornitori.Designer.cs">
+      <DependentUpon>ucFornitori.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ucMagazzino.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ucMagazzino.Designer.cs">
+      <DependentUpon>ucMagazzino.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ucVendite.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ucVendite.Designer.cs">
+      <DependentUpon>ucVendite.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
@@ -152,6 +188,24 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\frmVendite.resx">
       <DependentUpon>frmVendite.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ucBaseGenerica.resx">
+      <DependentUpon>ucBaseGenerica.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ucCitta.resx">
+      <DependentUpon>ucCitta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ucClienti.resx">
+      <DependentUpon>ucClienti.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ucFornitori.resx">
+      <DependentUpon>ucFornitori.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ucMagazzino.resx">
+      <DependentUpon>ucMagazzino.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ucVendite.resx">
+      <DependentUpon>ucVendite.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

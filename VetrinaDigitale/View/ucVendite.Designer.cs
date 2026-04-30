@@ -1,0 +1,300 @@
+﻿namespace VetrinaDigitale.View
+{
+    partial class ucVendite
+    {
+        /// <summary> 
+        /// Variabile di progettazione necessaria.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary> 
+        /// Pulire le risorse in uso.
+        /// </summary>
+        /// <param name="disposing">ha valore true se le risorse gestite devono essere eliminate, false in caso contrario.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Codice generato da Progettazione componenti
+
+        /// <summary> 
+        /// Metodo necessario per il supporto della finestra di progettazione. Non modificare 
+        /// il contenuto del metodo con l'editor di codice.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.txtDescrizione = new System.Windows.Forms.TextBox();
+            this.lblPrezzo = new System.Windows.Forms.Label();
+            this.btnConferma = new System.Windows.Forms.Button();
+            this.lblTotale = new System.Windows.Forms.Label();
+            this.dgvScontrino = new System.Windows.Forms.DataGridView();
+            this.btnAggiungi = new System.Windows.Forms.Button();
+            this.lblQtaDisponibile = new System.Windows.Forms.Label();
+            this.nudQta = new System.Windows.Forms.NumericUpDown();
+            this.lblQta = new System.Windows.Forms.Label();
+            this.cmbColore = new System.Windows.Forms.ComboBox();
+            this.lblColore = new System.Windows.Forms.Label();
+            this.cmbTaglia = new System.Windows.Forms.ComboBox();
+            this.lblTaglia = new System.Windows.Forms.Label();
+            this.cmbProdotto = new System.Windows.Forms.ComboBox();
+            this.lblPrototto = new System.Windows.Forms.Label();
+            this.cmbMetodoPagamento = new System.Windows.Forms.ComboBox();
+            this.lblMetodoPagamento = new System.Windows.Forms.Label();
+            this.cmbCliente = new System.Windows.Forms.ComboBox();
+            this.lblCliente = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvScontrino)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudQta)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // txtDescrizione
+            // 
+            this.txtDescrizione.Location = new System.Drawing.Point(22, 399);
+            this.txtDescrizione.Multiline = true;
+            this.txtDescrizione.Name = "txtDescrizione";
+            this.txtDescrizione.ReadOnly = true;
+            this.txtDescrizione.Size = new System.Drawing.Size(256, 70);
+            this.txtDescrizione.TabIndex = 37;
+            // 
+            // lblPrezzo
+            // 
+            this.lblPrezzo.AutoSize = true;
+            this.lblPrezzo.Location = new System.Drawing.Point(117, 207);
+            this.lblPrezzo.Name = "lblPrezzo";
+            this.lblPrezzo.Size = new System.Drawing.Size(51, 16);
+            this.lblPrezzo.TabIndex = 36;
+            this.lblPrezzo.Text = "Prezzo:";
+            // 
+            // btnConferma
+            // 
+            this.btnConferma.Location = new System.Drawing.Point(497, 438);
+            this.btnConferma.Name = "btnConferma";
+            this.btnConferma.Size = new System.Drawing.Size(109, 31);
+            this.btnConferma.TabIndex = 35;
+            this.btnConferma.Text = "CONFERMA";
+            this.btnConferma.UseVisualStyleBackColor = true;
+            this.btnConferma.Click += new System.EventHandler(this.btnConferma_Click);
+            // 
+            // lblTotale
+            // 
+            this.lblTotale.AutoSize = true;
+            this.lblTotale.Location = new System.Drawing.Point(494, 363);
+            this.lblTotale.Name = "lblTotale";
+            this.lblTotale.Size = new System.Drawing.Size(49, 16);
+            this.lblTotale.TabIndex = 34;
+            this.lblTotale.Text = "Totale:";
+            // 
+            // dgvScontrino
+            // 
+            this.dgvScontrino.AllowUserToAddRows = false;
+            this.dgvScontrino.AllowUserToDeleteRows = false;
+            this.dgvScontrino.AllowUserToResizeColumns = false;
+            this.dgvScontrino.AllowUserToResizeRows = false;
+            this.dgvScontrino.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvScontrino.Location = new System.Drawing.Point(299, 156);
+            this.dgvScontrino.Name = "dgvScontrino";
+            this.dgvScontrino.ReadOnly = true;
+            this.dgvScontrino.RowHeadersWidth = 51;
+            this.dgvScontrino.RowTemplate.Height = 24;
+            this.dgvScontrino.Size = new System.Drawing.Size(488, 179);
+            this.dgvScontrino.TabIndex = 33;
+            // 
+            // btnAggiungi
+            // 
+            this.btnAggiungi.Location = new System.Drawing.Point(93, 494);
+            this.btnAggiungi.Name = "btnAggiungi";
+            this.btnAggiungi.Size = new System.Drawing.Size(109, 31);
+            this.btnAggiungi.TabIndex = 32;
+            this.btnAggiungi.Text = "AGGIUNGI";
+            this.btnAggiungi.UseVisualStyleBackColor = true;
+            this.btnAggiungi.Click += new System.EventHandler(this.btnAggiungi_Click);
+            // 
+            // lblQtaDisponibile
+            // 
+            this.lblQtaDisponibile.AutoSize = true;
+            this.lblQtaDisponibile.Location = new System.Drawing.Point(90, 363);
+            this.lblQtaDisponibile.Name = "lblQtaDisponibile";
+            this.lblQtaDisponibile.Size = new System.Drawing.Size(128, 16);
+            this.lblQtaDisponibile.TabIndex = 31;
+            this.lblQtaDisponibile.Text = "Quantità disponibile:";
+            // 
+            // nudQta
+            // 
+            this.nudQta.Location = new System.Drawing.Point(120, 332);
+            this.nudQta.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.nudQta.Name = "nudQta";
+            this.nudQta.ReadOnly = true;
+            this.nudQta.Size = new System.Drawing.Size(120, 22);
+            this.nudQta.TabIndex = 30;
+            this.nudQta.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // lblQta
+            // 
+            this.lblQta.AutoSize = true;
+            this.lblQta.Location = new System.Drawing.Point(25, 334);
+            this.lblQta.Name = "lblQta";
+            this.lblQta.Size = new System.Drawing.Size(59, 16);
+            this.lblQta.TabIndex = 29;
+            this.lblQta.Text = "Quantità:";
+            // 
+            // cmbColore
+            // 
+            this.cmbColore.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbColore.FormattingEnabled = true;
+            this.cmbColore.Location = new System.Drawing.Point(120, 288);
+            this.cmbColore.Name = "cmbColore";
+            this.cmbColore.Size = new System.Drawing.Size(158, 24);
+            this.cmbColore.TabIndex = 28;
+            this.cmbColore.SelectedIndexChanged += new System.EventHandler(this.cmbColore_SelectedIndexChanged);
+            // 
+            // lblColore
+            // 
+            this.lblColore.AutoSize = true;
+            this.lblColore.Location = new System.Drawing.Point(26, 288);
+            this.lblColore.Name = "lblColore";
+            this.lblColore.Size = new System.Drawing.Size(50, 16);
+            this.lblColore.TabIndex = 27;
+            this.lblColore.Text = "Colore:";
+            // 
+            // cmbTaglia
+            // 
+            this.cmbTaglia.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbTaglia.FormattingEnabled = true;
+            this.cmbTaglia.Location = new System.Drawing.Point(120, 242);
+            this.cmbTaglia.Name = "cmbTaglia";
+            this.cmbTaglia.Size = new System.Drawing.Size(158, 24);
+            this.cmbTaglia.TabIndex = 26;
+            this.cmbTaglia.SelectedIndexChanged += new System.EventHandler(this.cmbTaglia_SelectedIndexChanged);
+            // 
+            // lblTaglia
+            // 
+            this.lblTaglia.AutoSize = true;
+            this.lblTaglia.Location = new System.Drawing.Point(26, 242);
+            this.lblTaglia.Name = "lblTaglia";
+            this.lblTaglia.Size = new System.Drawing.Size(49, 16);
+            this.lblTaglia.TabIndex = 25;
+            this.lblTaglia.Text = "Taglia:";
+            // 
+            // cmbProdotto
+            // 
+            this.cmbProdotto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbProdotto.FormattingEnabled = true;
+            this.cmbProdotto.Location = new System.Drawing.Point(120, 170);
+            this.cmbProdotto.Name = "cmbProdotto";
+            this.cmbProdotto.Size = new System.Drawing.Size(158, 24);
+            this.cmbProdotto.TabIndex = 24;
+            this.cmbProdotto.SelectedIndexChanged += new System.EventHandler(this.cmbProdotto_SelectedIndexChanged);
+            // 
+            // lblPrototto
+            // 
+            this.lblPrototto.AutoSize = true;
+            this.lblPrototto.Location = new System.Drawing.Point(26, 170);
+            this.lblPrototto.Name = "lblPrototto";
+            this.lblPrototto.Size = new System.Drawing.Size(61, 16);
+            this.lblPrototto.TabIndex = 23;
+            this.lblPrototto.Text = "Prodotto:";
+            // 
+            // cmbMetodoPagamento
+            // 
+            this.cmbMetodoPagamento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbMetodoPagamento.FormattingEnabled = true;
+            this.cmbMetodoPagamento.Location = new System.Drawing.Point(275, 112);
+            this.cmbMetodoPagamento.Name = "cmbMetodoPagamento";
+            this.cmbMetodoPagamento.Size = new System.Drawing.Size(158, 24);
+            this.cmbMetodoPagamento.TabIndex = 22;
+            // 
+            // lblMetodoPagamento
+            // 
+            this.lblMetodoPagamento.AutoSize = true;
+            this.lblMetodoPagamento.Location = new System.Drawing.Point(296, 93);
+            this.lblMetodoPagamento.Name = "lblMetodoPagamento";
+            this.lblMetodoPagamento.Size = new System.Drawing.Size(125, 16);
+            this.lblMetodoPagamento.TabIndex = 21;
+            this.lblMetodoPagamento.Text = "Metodo pagamento";
+            // 
+            // cmbCliente
+            // 
+            this.cmbCliente.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbCliente.FormattingEnabled = true;
+            this.cmbCliente.Location = new System.Drawing.Point(29, 112);
+            this.cmbCliente.Name = "cmbCliente";
+            this.cmbCliente.Size = new System.Drawing.Size(158, 24);
+            this.cmbCliente.TabIndex = 20;
+            // 
+            // lblCliente
+            // 
+            this.lblCliente.AutoSize = true;
+            this.lblCliente.Location = new System.Drawing.Point(79, 93);
+            this.lblCliente.Name = "lblCliente";
+            this.lblCliente.Size = new System.Drawing.Size(48, 16);
+            this.lblCliente.TabIndex = 19;
+            this.lblCliente.Text = "Cliente";
+            // 
+            // ucVendite
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.txtDescrizione);
+            this.Controls.Add(this.lblPrezzo);
+            this.Controls.Add(this.btnConferma);
+            this.Controls.Add(this.lblTotale);
+            this.Controls.Add(this.dgvScontrino);
+            this.Controls.Add(this.btnAggiungi);
+            this.Controls.Add(this.lblQtaDisponibile);
+            this.Controls.Add(this.nudQta);
+            this.Controls.Add(this.lblQta);
+            this.Controls.Add(this.cmbColore);
+            this.Controls.Add(this.lblColore);
+            this.Controls.Add(this.cmbTaglia);
+            this.Controls.Add(this.lblTaglia);
+            this.Controls.Add(this.cmbProdotto);
+            this.Controls.Add(this.lblPrototto);
+            this.Controls.Add(this.cmbMetodoPagamento);
+            this.Controls.Add(this.lblMetodoPagamento);
+            this.Controls.Add(this.cmbCliente);
+            this.Controls.Add(this.lblCliente);
+            this.Name = "ucVendite";
+            this.Size = new System.Drawing.Size(809, 619);
+            this.Load += new System.EventHandler(this.ucVendite_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvScontrino)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudQta)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.TextBox txtDescrizione;
+        private System.Windows.Forms.Label lblPrezzo;
+        private System.Windows.Forms.Button btnConferma;
+        private System.Windows.Forms.Label lblTotale;
+        private System.Windows.Forms.DataGridView dgvScontrino;
+        private System.Windows.Forms.Button btnAggiungi;
+        private System.Windows.Forms.Label lblQtaDisponibile;
+        private System.Windows.Forms.NumericUpDown nudQta;
+        private System.Windows.Forms.Label lblQta;
+        private System.Windows.Forms.ComboBox cmbColore;
+        private System.Windows.Forms.Label lblColore;
+        private System.Windows.Forms.ComboBox cmbTaglia;
+        private System.Windows.Forms.Label lblTaglia;
+        private System.Windows.Forms.ComboBox cmbProdotto;
+        private System.Windows.Forms.Label lblPrototto;
+        private System.Windows.Forms.ComboBox cmbMetodoPagamento;
+        private System.Windows.Forms.Label lblMetodoPagamento;
+        private System.Windows.Forms.ComboBox cmbCliente;
+        private System.Windows.Forms.Label lblCliente;
+    }
+}
