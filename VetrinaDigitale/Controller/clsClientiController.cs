@@ -162,7 +162,7 @@ namespace VetrinaDigitale.Controller
 
         public bool ControllaIdCliente(int idCliente)
         {
-            string query = "SELECT COUNT(*) FROM CLIENTI WHERE idCliente = @idCliente";
+            string query = "SELECT COUNT(*) FROM SCONTRINI WHERE idCliente = @idCliente";
             SqlCommand cmd = new SqlCommand();
             cmd.CommandType = CommandType.Text;
             cmd.CommandText = query;

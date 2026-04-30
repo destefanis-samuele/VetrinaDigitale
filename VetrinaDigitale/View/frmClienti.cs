@@ -98,7 +98,7 @@ namespace VetrinaDigitale.View
                 return;
             }
             int idCliente = Convert.ToInt32(dgvClienti.CurrentRow.Cells["idCliente"].Value);
-            if (clientiController.ControllaIdCliente(idCliente))
+            if (!clientiController.ControllaIdCliente(idCliente))
             {
                 if (MessageBox.Show("Sei sicuro di voler eliminare il cliente selezionato?", "Conferma eliminazione", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
@@ -106,6 +106,8 @@ namespace VetrinaDigitale.View
                     Reset();
                 }
             }
+            else
+                MessageBox.Show("Il cliente ha già fatto acquisti. Non è possibile eliminarlo", "Attenzione", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
 
         private void Reset()

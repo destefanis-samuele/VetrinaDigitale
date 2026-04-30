@@ -36,5 +36,70 @@ namespace VetrinaDigitale.View
             dgvGeneri.AutoResizeRows();
             dgvGeneri.AutoResizeColumns();
         }
+
+        private void btnNuovo_Click(object sender, EventArgs e)
+        {
+            string genere = txtGenere.Text.Trim();
+            if (!generiController.ControllaGenere(genere))
+            {
+                generiController.InserisciGenere(genere);
+                Reset();
+            }
+            else
+                MessageBox.Show("Il genere esiste già.", "Attenzione", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        }
+
+        private void btnSalva_Click(object sender, EventArgs e)
+        {
+            if (dgvGeneri.CurrentRow == null)
+            {
+                MessageBox.Show("Selezionare un genere da modificare.", "Attenzione", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            string genere = txtGenere.Text.Trim();
+            if (!generiController.ControllaGenere(genere))
+            {
+                int idGenere = Convert.ToInt32(dgvGeneri.CurrentRow.Cells["idGenere"].Value);
+                generiController.AggiornaGenere(idGenere, genere);
+                Reset();
+            }
+            else
+            {
+                MessageBox.Show("Il genere esiste già.", "Attenzione", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void btnElimina_Click(object sender, EventArgs e)
+        {
+            if (dgvGeneri.CurrentRow == null)
+            {
+                MessageBox.Show("Selezionare un genere da eliminare.", "Attenzione", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            int idGenere = Convert.ToInt32(dgvGeneri.CurrentRow.Cells["idGenere"].Value);
+            if (generiController.ControllaIdGenere(idGenere))
+            {
+                MessageBox.Show("Non è possibile eliminare questo genere perché è associato a uno o più prodotti.", "Attenzione", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            else
+            {
+                generiController.EliminaGenere(idGenere);
+                Reset();
+            }
+        }
+
+        private void dgvGeneri_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int riga = e.RowIndex;
+            if (riga >= 0)
+                txtGenere.Text = dgvGeneri.Rows[riga].Cells["genere"].Value.ToString();
+        }
+
+        private void Reset()
+        {
+            txtGenere.Text = "";
+            caricaDgvGeneri();
+        }
     }
 }
