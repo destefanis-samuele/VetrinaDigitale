@@ -55,6 +55,11 @@ namespace VetrinaDigitale.View
             MostraSchermata(ucFornitori);
         }
 
+        private void btnOrdini_Click(object sender, EventArgs e)
+        {
+            ucOrdini uc = new ucOrdini("Gestione ordini");
+            MostraSchermata(uc);
+        }
         private void btnGeneri_Click(object sender, EventArgs e)
         {
             ucBaseGenerica uc = new ucBaseGenerica("GENERI", "genere", "idGenere", "Gestione generi", "PRODOTTI", "idGenere");
@@ -84,5 +89,6 @@ namespace VetrinaDigitale.View
             ucBaseGenerica uc = new ucBaseGenerica("COLORI", "colore", "idColore", "Gestione colori", "VARIANTI_PRODOTTO", "idColore");
             MostraSchermata(uc);
         }
+
     }
 }

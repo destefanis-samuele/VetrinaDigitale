@@ -68,6 +68,7 @@
     <Compile Include="Controller\clsFornitoriController.cs" />
     <Compile Include="Controller\clsLoginController.cs" />
     <Compile Include="Controller\clsMagazzinoController.cs" />
+    <Compile Include="Controller\clsOrdiniController.cs" />
     <Compile Include="Controller\clsVenditeController.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -118,6 +119,12 @@
     <Compile Include="View\ucMagazzino.Designer.cs">
       <DependentUpon>ucMagazzino.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\ucOrdini.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ucOrdini.Designer.cs">
+      <DependentUpon>ucOrdini.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\ucVendite.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -150,6 +157,9 @@
     <EmbeddedResource Include="View\ucMagazzino.resx">
       <DependentUpon>ucMagazzino.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\ucOrdini.resx">
+      <DependentUpon>ucOrdini.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\ucVendite.resx">
       <DependentUpon>ucVendite.cs</DependentUpon>
     </EmbeddedResource>
@@ -181,6 +191,7 @@
     <Content Include="Resources\van.png" />
     <Content Include="Resources\venus-and-mars.png" />
     <Content Include="Resources\warehouse.png" />
+    <Content Include="Resources\x.png" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">

@@ -114,5 +114,10 @@ namespace ADOSQLServer2017_ns
             }
             return ris;
         }
+
+        public SqlConnection GetConnection()
+        {
+            return cn;
+        }
     }
 }

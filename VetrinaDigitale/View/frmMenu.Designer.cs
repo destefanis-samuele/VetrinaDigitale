@@ -46,8 +46,8 @@
             this.btnFornitori = new System.Windows.Forms.Button();
             this.btnOrdini = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.panelContenuto = new System.Windows.Forms.Panel();
             this.lblDescrizione = new System.Windows.Forms.Label();
+            this.panelContenuto = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -78,6 +78,7 @@
             // 
             // btnMagazzino
             // 
+            this.btnMagazzino.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMagazzino.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnMagazzino.FlatAppearance.BorderSize = 0;
             this.btnMagazzino.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -95,6 +96,7 @@
             // 
             // btnColori
             // 
+            this.btnColori.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnColori.FlatAppearance.BorderSize = 0;
             this.btnColori.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnColori.Image = ((System.Drawing.Image)(resources.GetObject("btnColori.Image")));
@@ -119,6 +121,7 @@
             // 
             // btnTaglie
             // 
+            this.btnTaglie.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnTaglie.FlatAppearance.BorderSize = 0;
             this.btnTaglie.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTaglie.Image = ((System.Drawing.Image)(resources.GetObject("btnTaglie.Image")));
@@ -143,6 +146,7 @@
             // 
             // btnGeneri
             // 
+            this.btnGeneri.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnGeneri.FlatAppearance.BorderSize = 0;
             this.btnGeneri.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGeneri.Image = ((System.Drawing.Image)(resources.GetObject("btnGeneri.Image")));
@@ -159,6 +163,7 @@
             // 
             // btnCategorie
             // 
+            this.btnCategorie.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCategorie.FlatAppearance.BorderSize = 0;
             this.btnCategorie.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCategorie.Image = ((System.Drawing.Image)(resources.GetObject("btnCategorie.Image")));
@@ -206,6 +211,7 @@
             // 
             // btnMarche
             // 
+            this.btnMarche.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMarche.FlatAppearance.BorderSize = 0;
             this.btnMarche.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMarche.Image = ((System.Drawing.Image)(resources.GetObject("btnMarche.Image")));
@@ -222,6 +228,7 @@
             // 
             // btnVendite
             // 
+            this.btnVendite.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnVendite.FlatAppearance.BorderSize = 0;
             this.btnVendite.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVendite.Image = ((System.Drawing.Image)(resources.GetObject("btnVendite.Image")));
@@ -238,6 +245,7 @@
             // 
             // btnClienti
             // 
+            this.btnClienti.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnClienti.FlatAppearance.BorderSize = 0;
             this.btnClienti.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClienti.Image = ((System.Drawing.Image)(resources.GetObject("btnClienti.Image")));
@@ -254,6 +262,7 @@
             // 
             // btnFornitori
             // 
+            this.btnFornitori.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnFornitori.FlatAppearance.BorderSize = 0;
             this.btnFornitori.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFornitori.Image = ((System.Drawing.Image)(resources.GetObject("btnFornitori.Image")));
@@ -270,6 +279,7 @@
             // 
             // btnOrdini
             // 
+            this.btnOrdini.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnOrdini.FlatAppearance.BorderSize = 0;
             this.btnOrdini.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOrdini.Image = ((System.Drawing.Image)(resources.GetObject("btnOrdini.Image")));
@@ -282,6 +292,7 @@
             this.btnOrdini.Text = "  Ordini";
             this.btnOrdini.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnOrdini.UseVisualStyleBackColor = true;
+            this.btnOrdini.Click += new System.EventHandler(this.btnOrdini_Click);
             // 
             // panel5
             // 
@@ -293,14 +304,6 @@
             this.panel5.Size = new System.Drawing.Size(904, 69);
             this.panel5.TabIndex = 11;
             // 
-            // panelContenuto
-            // 
-            this.panelContenuto.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelContenuto.Location = new System.Drawing.Point(296, 69);
-            this.panelContenuto.Name = "panelContenuto";
-            this.panelContenuto.Size = new System.Drawing.Size(904, 631);
-            this.panelContenuto.TabIndex = 12;
-            // 
             // lblDescrizione
             // 
             this.lblDescrizione.AutoSize = true;
@@ -311,6 +314,14 @@
             this.lblDescrizione.Size = new System.Drawing.Size(121, 23);
             this.lblDescrizione.TabIndex = 2;
             this.lblDescrizione.Text = "descrizione";
+            // 
+            // panelContenuto
+            // 
+            this.panelContenuto.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelContenuto.Location = new System.Drawing.Point(296, 69);
+            this.panelContenuto.Name = "panelContenuto";
+            this.panelContenuto.Size = new System.Drawing.Size(904, 631);
+            this.panelContenuto.TabIndex = 12;
             // 
             // frmMenu
             // 
