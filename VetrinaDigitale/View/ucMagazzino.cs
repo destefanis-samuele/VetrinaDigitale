@@ -13,9 +13,11 @@ namespace VetrinaDigitale.View
 {
     public partial class ucMagazzino : UserControl
     {
-        public ucMagazzino()
+        private string _testoLbl;
+        public ucMagazzino(string testoLbl)
         {
             InitializeComponent();
+            _testoLbl = testoLbl;
         }
 
         clsMagazzinoController magazzinoController;
@@ -25,6 +27,14 @@ namespace VetrinaDigitale.View
             magazzinoController = new clsMagazzinoController();
 
             CaricaProdotti();
+
+            PopolaLbl();
+        }
+
+        private void PopolaLbl()
+        {
+            var menu = FindForm() as frmMenu;
+            menu?.AggiornaLbl(_testoLbl);
         }
 
         private void CaricaProdotti()

@@ -30,26 +30,28 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMenu));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
             this.btnMagazzino = new System.Windows.Forms.Button();
             this.btnColori = new System.Windows.Forms.Button();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.btnTaglie = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.btnGeneri = new System.Windows.Forms.Button();
             this.btnCategorie = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnMarche = new System.Windows.Forms.Button();
             this.btnVendite = new System.Windows.Forms.Button();
             this.btnClienti = new System.Windows.Forms.Button();
             this.btnFornitori = new System.Windows.Forms.Button();
             this.btnOrdini = new System.Windows.Forms.Button();
+            this.panel5 = new System.Windows.Forms.Panel();
             this.panelContenuto = new System.Windows.Forms.Panel();
+            this.lblDescrizione = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -74,52 +76,6 @@
             this.panel1.Size = new System.Drawing.Size(296, 700);
             this.panel1.TabIndex = 10;
             // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.pictureBox1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(296, 110);
-            this.panel2.TabIndex = 0;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(162, 29);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(54, 23);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "D. R.";
-            // 
-            // panel3
-            // 
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel3.Location = new System.Drawing.Point(0, 110);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(15, 590);
-            this.panel3.TabIndex = 1;
-            // 
-            // panel4
-            // 
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel4.Location = new System.Drawing.Point(281, 110);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(15, 590);
-            this.panel4.TabIndex = 2;
-            // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.White;
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel5.Location = new System.Drawing.Point(296, 0);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(904, 69);
-            this.panel5.TabIndex = 11;
-            // 
             // btnMagazzino
             // 
             this.btnMagazzino.Dock = System.Windows.Forms.DockStyle.Top;
@@ -135,6 +91,7 @@
             this.btnMagazzino.Text = "  Magazzino";
             this.btnMagazzino.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnMagazzino.UseVisualStyleBackColor = true;
+            this.btnMagazzino.Click += new System.EventHandler(this.btnMagazzino_Click);
             // 
             // btnColori
             // 
@@ -152,6 +109,14 @@
             this.btnColori.UseVisualStyleBackColor = true;
             this.btnColori.Click += new System.EventHandler(this.btnColori_Click);
             // 
+            // panel4
+            // 
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel4.Location = new System.Drawing.Point(281, 110);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(15, 590);
+            this.panel4.TabIndex = 2;
+            // 
             // btnTaglie
             // 
             this.btnTaglie.FlatAppearance.BorderSize = 0;
@@ -167,6 +132,14 @@
             this.btnTaglie.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnTaglie.UseVisualStyleBackColor = true;
             this.btnTaglie.Click += new System.EventHandler(this.btnTaglie_Click);
+            // 
+            // panel3
+            // 
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel3.Location = new System.Drawing.Point(0, 110);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(15, 590);
+            this.panel3.TabIndex = 1;
             // 
             // btnGeneri
             // 
@@ -199,6 +172,27 @@
             this.btnCategorie.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCategorie.UseVisualStyleBackColor = true;
             this.btnCategorie.Click += new System.EventHandler(this.btnCategorie_Click);
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.pictureBox1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(296, 110);
+            this.panel2.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(162, 29);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(54, 23);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "D. R.";
             // 
             // pictureBox1
             // 
@@ -289,6 +283,16 @@
             this.btnOrdini.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnOrdini.UseVisualStyleBackColor = true;
             // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.White;
+            this.panel5.Controls.Add(this.lblDescrizione);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel5.Location = new System.Drawing.Point(296, 0);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(904, 69);
+            this.panel5.TabIndex = 11;
+            // 
             // panelContenuto
             // 
             this.panelContenuto.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -296,6 +300,17 @@
             this.panelContenuto.Name = "panelContenuto";
             this.panelContenuto.Size = new System.Drawing.Size(904, 631);
             this.panelContenuto.TabIndex = 12;
+            // 
+            // lblDescrizione
+            // 
+            this.lblDescrizione.AutoSize = true;
+            this.lblDescrizione.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDescrizione.ForeColor = System.Drawing.Color.Black;
+            this.lblDescrizione.Location = new System.Drawing.Point(98, 29);
+            this.lblDescrizione.Name = "lblDescrizione";
+            this.lblDescrizione.Size = new System.Drawing.Size(121, 23);
+            this.lblDescrizione.TabIndex = 2;
+            this.lblDescrizione.Text = "descrizione";
             // 
             // frmMenu
             // 
@@ -309,7 +324,7 @@
             this.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MENU\'";
@@ -317,6 +332,8 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -340,5 +357,6 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panelContenuto;
+        private System.Windows.Forms.Label lblDescrizione;
     }
 }

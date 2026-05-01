@@ -76,29 +76,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="View\frmBaseGenerica.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\frmBaseGenerica.Designer.cs">
-      <DependentUpon>frmBaseGenerica.cs</DependentUpon>
-    </Compile>
     <Compile Include="View\frmCitta.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="View\frmCitta.Designer.cs">
       <DependentUpon>frmCitta.cs</DependentUpon>
-    </Compile>
-    <Compile Include="View\frmClienti.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\frmClienti.Designer.cs">
-      <DependentUpon>frmClienti.cs</DependentUpon>
-    </Compile>
-    <Compile Include="View\frmFornitori.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\frmFornitori.Designer.cs">
-      <DependentUpon>frmFornitori.cs</DependentUpon>
     </Compile>
     <Compile Include="View\frmLogin.cs">
       <SubType>Form</SubType>
@@ -106,23 +88,11 @@
     <Compile Include="View\frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\frmMagazzino.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\frmMagazzino.Designer.cs">
-      <DependentUpon>frmMagazzino.cs</DependentUpon>
-    </Compile>
     <Compile Include="View\frmMenu.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="View\frmMenu.Designer.cs">
       <DependentUpon>frmMenu.cs</DependentUpon>
-    </Compile>
-    <Compile Include="View\frmVendite.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\frmVendite.Designer.cs">
-      <DependentUpon>frmVendite.cs</DependentUpon>
     </Compile>
     <Compile Include="View\ucBaseGenerica.cs">
       <SubType>UserControl</SubType>
@@ -165,29 +135,14 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\frmBaseGenerica.resx">
-      <DependentUpon>frmBaseGenerica.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="View\frmCitta.resx">
       <DependentUpon>frmCitta.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\frmClienti.resx">
-      <DependentUpon>frmClienti.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\frmFornitori.resx">
-      <DependentUpon>frmFornitori.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\frmMagazzino.resx">
-      <DependentUpon>frmMagazzino.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="View\frmMenu.resx">
       <DependentUpon>frmMenu.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\frmVendite.resx">
-      <DependentUpon>frmVendite.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\ucBaseGenerica.resx">
       <DependentUpon>ucBaseGenerica.cs</DependentUpon>

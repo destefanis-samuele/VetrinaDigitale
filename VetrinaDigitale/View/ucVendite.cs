@@ -14,9 +14,11 @@ namespace VetrinaDigitale.View
 {
     public partial class ucVendite : UserControl
     {
-        public ucVendite()
+        private string _testoLbl;
+        public ucVendite(string testoLbl)
         {
             InitializeComponent();
+            _testoLbl = testoLbl;
         }
 
         clsVenditeController venditeController;
@@ -37,6 +39,14 @@ namespace VetrinaDigitale.View
             impostaDgvScontrino(dgvScontrino, "idVariante;Prodotto;Taglia;Colore;Quantità;Prezzo;Totale", "idVariante;Prodotto;Taglia;Colore;Quantita;Prezzo;Totale");
 
             lblTotale.Text = "";
+
+            PopolaLbl();
+        }
+
+        private void PopolaLbl()
+        {
+            var menu = FindForm() as frmMenu;
+            menu?.AggiornaLbl(_testoLbl);
         }
 
         private void impostaDgvScontrino(DataGridView dgv, string intestazione, string nomi)

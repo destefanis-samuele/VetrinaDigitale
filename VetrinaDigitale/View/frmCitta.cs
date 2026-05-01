@@ -59,13 +59,6 @@ namespace VetrinaDigitale.View
                 MessageBox.Show("La città inserita è già presente nel database.", "Attenzione", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
 
-        private void Reset()
-        {
-            txtCitta.Text = "";
-            txtCAP.Text = "";
-            txtProvincia.Text = "";
-            caricaDgvCitta();
-        }
 
         private void btnElimina_Click(object sender, EventArgs e)
         {
@@ -76,6 +69,13 @@ namespace VetrinaDigitale.View
             }
              else
                 MessageBox.Show("Selezionare una città da eliminare.", "Attenzione", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        }
+        private void Reset()
+        {
+            txtCitta.Text = "";
+            txtCAP.Text = "";
+            txtProvincia.Text = "";
+            caricaDgvCitta();
         }
     }
 }

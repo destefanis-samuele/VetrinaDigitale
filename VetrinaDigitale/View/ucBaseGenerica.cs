@@ -18,11 +18,13 @@ namespace VetrinaDigitale.View
 
         private string nomeId;
         private string nomeCampo;
-        private string tabellaControllo;
 
+        private string tabellaControllo;
         private string campoControllo;
 
-        public ucBaseGenerica(string tabella, string campo, string id, string titolo, string tabellaCtrl, string campoCtrl)
+        private string _testoLbl;
+
+        public ucBaseGenerica(string tabella, string campo, string id, string testoLbl, string tabellaCtrl, string campoCtrl)
         {
             InitializeComponent();
 
@@ -33,14 +35,23 @@ namespace VetrinaDigitale.View
 
             tabellaControllo = tabellaCtrl;
             campoControllo = campoCtrl;
+            
+            _testoLbl = testoLbl;
 
-            Text = titolo;
             lblNome.Text = $"{nomeCampo}:";
         }
 
         private void ucBaseGenerica_Load(object sender, EventArgs e)
         {
             CaricaDati();
+
+            PopolaLbl();
+        }
+
+        private void PopolaLbl()
+        {
+            var menu = FindForm() as frmMenu;
+            menu?.AggiornaLbl(_testoLbl);
         }
 
         private void CaricaDati()

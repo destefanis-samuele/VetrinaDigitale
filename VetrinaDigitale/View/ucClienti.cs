@@ -14,9 +14,12 @@ namespace VetrinaDigitale.View
 {
     public partial class ucClienti : UserControl
     {
-        public ucClienti()
+        private string _testoLbl;
+
+        public ucClienti(string testoLbl)
         {
             InitializeComponent();
+            _testoLbl = testoLbl;
         }
 
         clsClientiController clientiController;
@@ -28,6 +31,14 @@ namespace VetrinaDigitale.View
             caricaDgvClienti();
 
             caricaCmbCitta();
+
+            PopolaLbl();
+        }
+
+        private void PopolaLbl()
+        {
+            var menu = FindForm() as frmMenu;
+            menu?.AggiornaLbl(_testoLbl);
         }
 
         private void caricaDgvClienti()

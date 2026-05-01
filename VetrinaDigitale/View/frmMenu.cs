@@ -16,6 +16,7 @@ namespace VetrinaDigitale.View
         public frmMenu()
         {
             InitializeComponent();
+            lblDescrizione.Text = "";
         }
 
         private void MostraSchermata(UserControl control)
@@ -25,78 +26,62 @@ namespace VetrinaDigitale.View
             panelContenuto.Controls.Add(control);
         }
 
+        public void AggiornaLbl(string testo)
+        {
+            lblDescrizione.Text = testo;
+        }
+
         private void btnMagazzino_Click(object sender, EventArgs e)
         {
-            //frmMagazzino frmMagazzino = new frmMagazzino();
-            //frmMagazzino.Show();
-
-            ucMagazzino ucMagazzino = new ucMagazzino();
+            ucMagazzino ucMagazzino = new ucMagazzino("Gestione magazzino");
             MostraSchermata(ucMagazzino);
         }
 
         private void btnClienti_Click(object sender, EventArgs e)
         {
-            //frmClienti frmClienti = new frmClienti();
-            //frmClienti.Show();
-
-            ucClienti ucClienti = new ucClienti();
+            ucClienti ucClienti = new ucClienti("Gestione clienti");
             MostraSchermata(ucClienti);
         }
 
         private void btnVendite_Click(object sender, EventArgs e)
         {
-            //frmVendite frmVendite = new frmVendite();
-            //frmVendite.Show();
-
-            ucVendite ucVendite = new ucVendite();
+            ucVendite ucVendite = new ucVendite("Gestione vendite");
             MostraSchermata(ucVendite);
         }
 
         private void btnFornitori_Click(object sender, EventArgs e)
         {
-            //frmFornitori frmFornitori = new frmFornitori();
-            //frmFornitori.Show();
-
-            ucFornitori ucFornitori = new ucFornitori();
+            ucFornitori ucFornitori = new ucFornitori("Gestione fornitori");
             MostraSchermata(ucFornitori);
         }
 
         private void btnGeneri_Click(object sender, EventArgs e)
         {
-            //frmBaseGenerica frm = new frmBaseGenerica("GENERI", "genere", "idGenere", "GESTIONE GENERI", "PRODOTTI", "idGenere");
-            //frm.ShowDialog();
-
-            ucBaseGenerica uc = new ucBaseGenerica("GENERI", "genere", "idGenere", "GESTIONE GENERI", "PRODOTTI", "idGenere");
+            ucBaseGenerica uc = new ucBaseGenerica("GENERI", "genere", "idGenere", "Gestione generi", "PRODOTTI", "idGenere");
             MostraSchermata(uc);
         }
 
         private void btnMarche_Click(object sender, EventArgs e)
         {
-            //frmBaseGenerica frm = new frmBaseGenerica("MARCHE", "marca", "idMarca", "GESTIONE MARCHE", "PRODOTTI", "idMarca");
-            //frm.ShowDialog();
-
-            ucBaseGenerica uc = new ucBaseGenerica("MARCHE", "marca", "idMarca", "GESTIONE MARCHE", "PRODOTTI", "idMarca");
+            ucBaseGenerica uc = new ucBaseGenerica("MARCHE", "marca", "idMarca", "Gestione marche", "PRODOTTI", "idMarca");
             MostraSchermata(uc);
         }
 
         private void btnCategorie_Click(object sender, EventArgs e)
         {
-            //frmBaseGenerica frm = new frmBaseGenerica("CATEGORIE", "categoria", "idCategoria", "GESTIONE CATEGORIE", "PRODOTTI", "idCategoria");
-            //frm.ShowDialog();
-
-            ucBaseGenerica uc = new ucBaseGenerica("CATEGORIE", "categoria", "idCategoria", "GESTIONE CATEGORIE", "PRODOTTI", "idCategoria");
+            ucBaseGenerica uc = new ucBaseGenerica("CATEGORIE", "categoria", "idCategoria", "Gestione categorie", "PRODOTTI", "idCategoria");
             MostraSchermata(uc);
         }
 
         private void btnTaglie_Click(object sender, EventArgs e)
         {
-            ucBaseGenerica uc = new ucBaseGenerica("TAGLIE", "taglia", "idTaglia", "GESTIONE TAGLIE", "VARIANTI_PRODOTTO", "idTaglia");
+            ucBaseGenerica uc = new ucBaseGenerica("TAGLIE", "taglia", "idTaglia", "Gestione taglie", "VARIANTI_PRODOTTO", "idTaglia");
             MostraSchermata(uc);
         }
 
         private void btnColori_Click(object sender, EventArgs e)
         {
-            ucBaseGenerica uc = new ucBaseGenerica("COLORI", "colore", "idColore", "GESTIONE COLORI", "VARIANTI_PRODOTTO", "idColore");
+            ucBaseGenerica uc = new ucBaseGenerica("COLORI", "colore", "idColore", "Gestione colori", "VARIANTI_PRODOTTO", "idColore");
             MostraSchermata(uc);
         }
     }

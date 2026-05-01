@@ -11,7 +11,6 @@ using System.Windows.Forms;
 using System.IO;
 using VetrinaDigitale.Controller;
 using VetrinaDigitale.View;
-//using VetrinaDigitale.Model;
 
 namespace VetrinaDigitale.View
 {
