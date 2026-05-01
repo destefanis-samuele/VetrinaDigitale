@@ -39,9 +39,10 @@
             // 
             // btnElimina
             // 
-            this.btnElimina.Location = new System.Drawing.Point(470, 271);
+            this.btnElimina.Location = new System.Drawing.Point(588, 356);
+            this.btnElimina.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnElimina.Name = "btnElimina";
-            this.btnElimina.Size = new System.Drawing.Size(141, 51);
+            this.btnElimina.Size = new System.Drawing.Size(176, 67);
             this.btnElimina.TabIndex = 25;
             this.btnElimina.Text = "ELIMINA";
             this.btnElimina.UseVisualStyleBackColor = true;
@@ -49,9 +50,10 @@
             // 
             // btnSalva
             // 
-            this.btnSalva.Location = new System.Drawing.Point(470, 195);
+            this.btnSalva.Location = new System.Drawing.Point(588, 256);
+            this.btnSalva.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSalva.Name = "btnSalva";
-            this.btnSalva.Size = new System.Drawing.Size(141, 51);
+            this.btnSalva.Size = new System.Drawing.Size(176, 67);
             this.btnSalva.TabIndex = 24;
             this.btnSalva.Text = "SALVA";
             this.btnSalva.UseVisualStyleBackColor = true;
@@ -59,9 +61,10 @@
             // 
             // btnNuovo
             // 
-            this.btnNuovo.Location = new System.Drawing.Point(470, 126);
+            this.btnNuovo.Location = new System.Drawing.Point(588, 165);
+            this.btnNuovo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnNuovo.Name = "btnNuovo";
-            this.btnNuovo.Size = new System.Drawing.Size(141, 51);
+            this.btnNuovo.Size = new System.Drawing.Size(176, 67);
             this.btnNuovo.TabIndex = 23;
             this.btnNuovo.Text = "NUOVO";
             this.btnNuovo.UseVisualStyleBackColor = true;
@@ -69,17 +72,19 @@
             // 
             // txtNome
             // 
-            this.txtNome.Location = new System.Drawing.Point(486, 60);
+            this.txtNome.Location = new System.Drawing.Point(608, 79);
+            this.txtNome.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(217, 22);
+            this.txtNome.Size = new System.Drawing.Size(270, 28);
             this.txtNome.TabIndex = 22;
             // 
             // lblNome
             // 
             this.lblNome.AutoSize = true;
-            this.lblNome.Location = new System.Drawing.Point(383, 63);
+            this.lblNome.Location = new System.Drawing.Point(479, 83);
+            this.lblNome.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNome.Name = "lblNome";
-            this.lblNome.Size = new System.Drawing.Size(47, 16);
+            this.lblNome.Size = new System.Drawing.Size(65, 21);
             this.lblNome.TabIndex = 21;
             this.lblNome.Text = "Nome:";
             // 
@@ -89,19 +94,22 @@
             this.dgvDati.AllowUserToDeleteRows = false;
             this.dgvDati.AllowUserToResizeColumns = false;
             this.dgvDati.AllowUserToResizeRows = false;
+            this.dgvDati.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvDati.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvDati.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDati.Location = new System.Drawing.Point(19, 23);
+            this.dgvDati.Location = new System.Drawing.Point(24, 30);
+            this.dgvDati.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvDati.Name = "dgvDati";
             this.dgvDati.ReadOnly = true;
             this.dgvDati.RowHeadersWidth = 51;
             this.dgvDati.RowTemplate.Height = 24;
-            this.dgvDati.Size = new System.Drawing.Size(328, 426);
+            this.dgvDati.Size = new System.Drawing.Size(410, 559);
             this.dgvDati.TabIndex = 20;
             this.dgvDati.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDati_CellClick);
             // 
             // ucBaseGenerica
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.btnElimina);
             this.Controls.Add(this.btnSalva);
@@ -109,8 +117,10 @@
             this.Controls.Add(this.txtNome);
             this.Controls.Add(this.lblNome);
             this.Controls.Add(this.dgvDati);
+            this.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "ucBaseGenerica";
-            this.Size = new System.Drawing.Size(715, 479);
+            this.Size = new System.Drawing.Size(894, 629);
             this.Load += new System.EventHandler(this.ucBaseGenerica_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDati)).EndInit();
             this.ResumeLayout(false);

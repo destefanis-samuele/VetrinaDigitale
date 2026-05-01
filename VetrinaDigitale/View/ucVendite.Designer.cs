@@ -53,27 +53,30 @@
             // 
             // txtDescrizione
             // 
-            this.txtDescrizione.Location = new System.Drawing.Point(23, 321);
+            this.txtDescrizione.Location = new System.Drawing.Point(29, 421);
+            this.txtDescrizione.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtDescrizione.Multiline = true;
             this.txtDescrizione.Name = "txtDescrizione";
             this.txtDescrizione.ReadOnly = true;
-            this.txtDescrizione.Size = new System.Drawing.Size(256, 70);
+            this.txtDescrizione.Size = new System.Drawing.Size(319, 91);
             this.txtDescrizione.TabIndex = 37;
             // 
             // lblPrezzo
             // 
             this.lblPrezzo.AutoSize = true;
-            this.lblPrezzo.Location = new System.Drawing.Point(118, 129);
+            this.lblPrezzo.Location = new System.Drawing.Point(34, 167);
+            this.lblPrezzo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPrezzo.Name = "lblPrezzo";
-            this.lblPrezzo.Size = new System.Drawing.Size(51, 16);
+            this.lblPrezzo.Size = new System.Drawing.Size(66, 21);
             this.lblPrezzo.TabIndex = 36;
             this.lblPrezzo.Text = "Prezzo:";
             // 
             // btnConferma
             // 
-            this.btnConferma.Location = new System.Drawing.Point(498, 360);
+            this.btnConferma.Location = new System.Drawing.Point(622, 472);
+            this.btnConferma.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnConferma.Name = "btnConferma";
-            this.btnConferma.Size = new System.Drawing.Size(109, 31);
+            this.btnConferma.Size = new System.Drawing.Size(136, 41);
             this.btnConferma.TabIndex = 35;
             this.btnConferma.Text = "CONFERMA";
             this.btnConferma.UseVisualStyleBackColor = true;
@@ -82,9 +85,10 @@
             // lblTotale
             // 
             this.lblTotale.AutoSize = true;
-            this.lblTotale.Location = new System.Drawing.Point(495, 285);
+            this.lblTotale.Location = new System.Drawing.Point(619, 374);
+            this.lblTotale.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTotale.Name = "lblTotale";
-            this.lblTotale.Size = new System.Drawing.Size(49, 16);
+            this.lblTotale.Size = new System.Drawing.Size(67, 21);
             this.lblTotale.TabIndex = 34;
             this.lblTotale.Text = "Totale:";
             // 
@@ -94,20 +98,24 @@
             this.dgvScontrino.AllowUserToDeleteRows = false;
             this.dgvScontrino.AllowUserToResizeColumns = false;
             this.dgvScontrino.AllowUserToResizeRows = false;
+            this.dgvScontrino.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvScontrino.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvScontrino.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvScontrino.Location = new System.Drawing.Point(300, 78);
+            this.dgvScontrino.Location = new System.Drawing.Point(375, 102);
+            this.dgvScontrino.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvScontrino.Name = "dgvScontrino";
             this.dgvScontrino.ReadOnly = true;
             this.dgvScontrino.RowHeadersWidth = 51;
             this.dgvScontrino.RowTemplate.Height = 24;
-            this.dgvScontrino.Size = new System.Drawing.Size(488, 179);
+            this.dgvScontrino.Size = new System.Drawing.Size(610, 235);
             this.dgvScontrino.TabIndex = 33;
             // 
             // btnAggiungi
             // 
-            this.btnAggiungi.Location = new System.Drawing.Point(94, 416);
+            this.btnAggiungi.Location = new System.Drawing.Point(118, 546);
+            this.btnAggiungi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAggiungi.Name = "btnAggiungi";
-            this.btnAggiungi.Size = new System.Drawing.Size(109, 31);
+            this.btnAggiungi.Size = new System.Drawing.Size(136, 41);
             this.btnAggiungi.TabIndex = 32;
             this.btnAggiungi.Text = "AGGIUNGI";
             this.btnAggiungi.UseVisualStyleBackColor = true;
@@ -116,15 +124,17 @@
             // lblQtaDisponibile
             // 
             this.lblQtaDisponibile.AutoSize = true;
-            this.lblQtaDisponibile.Location = new System.Drawing.Point(91, 285);
+            this.lblQtaDisponibile.Location = new System.Drawing.Point(34, 383);
+            this.lblQtaDisponibile.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblQtaDisponibile.Name = "lblQtaDisponibile";
-            this.lblQtaDisponibile.Size = new System.Drawing.Size(128, 16);
+            this.lblQtaDisponibile.Size = new System.Drawing.Size(183, 21);
             this.lblQtaDisponibile.TabIndex = 31;
             this.lblQtaDisponibile.Text = "Quantità disponibile:";
             // 
             // nudQta
             // 
-            this.nudQta.Location = new System.Drawing.Point(121, 254);
+            this.nudQta.Location = new System.Drawing.Point(151, 333);
+            this.nudQta.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.nudQta.Minimum = new decimal(new int[] {
             1,
             0,
@@ -132,7 +142,7 @@
             0});
             this.nudQta.Name = "nudQta";
             this.nudQta.ReadOnly = true;
-            this.nudQta.Size = new System.Drawing.Size(120, 22);
+            this.nudQta.Size = new System.Drawing.Size(150, 28);
             this.nudQta.TabIndex = 30;
             this.nudQta.Value = new decimal(new int[] {
             1,
@@ -143,9 +153,10 @@
             // lblQta
             // 
             this.lblQta.AutoSize = true;
-            this.lblQta.Location = new System.Drawing.Point(26, 256);
+            this.lblQta.Location = new System.Drawing.Point(32, 336);
+            this.lblQta.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblQta.Name = "lblQta";
-            this.lblQta.Size = new System.Drawing.Size(59, 16);
+            this.lblQta.Size = new System.Drawing.Size(91, 21);
             this.lblQta.TabIndex = 29;
             this.lblQta.Text = "Quantità:";
             // 
@@ -153,18 +164,20 @@
             // 
             this.cmbColore.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbColore.FormattingEnabled = true;
-            this.cmbColore.Location = new System.Drawing.Point(121, 210);
+            this.cmbColore.Location = new System.Drawing.Point(151, 276);
+            this.cmbColore.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbColore.Name = "cmbColore";
-            this.cmbColore.Size = new System.Drawing.Size(158, 24);
+            this.cmbColore.Size = new System.Drawing.Size(196, 29);
             this.cmbColore.TabIndex = 28;
             this.cmbColore.SelectedIndexChanged += new System.EventHandler(this.cmbColore_SelectedIndexChanged);
             // 
             // lblColore
             // 
             this.lblColore.AutoSize = true;
-            this.lblColore.Location = new System.Drawing.Point(27, 210);
+            this.lblColore.Location = new System.Drawing.Point(34, 276);
+            this.lblColore.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblColore.Name = "lblColore";
-            this.lblColore.Size = new System.Drawing.Size(50, 16);
+            this.lblColore.Size = new System.Drawing.Size(70, 21);
             this.lblColore.TabIndex = 27;
             this.lblColore.Text = "Colore:";
             // 
@@ -172,18 +185,20 @@
             // 
             this.cmbTaglia.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbTaglia.FormattingEnabled = true;
-            this.cmbTaglia.Location = new System.Drawing.Point(121, 164);
+            this.cmbTaglia.Location = new System.Drawing.Point(151, 215);
+            this.cmbTaglia.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbTaglia.Name = "cmbTaglia";
-            this.cmbTaglia.Size = new System.Drawing.Size(158, 24);
+            this.cmbTaglia.Size = new System.Drawing.Size(196, 29);
             this.cmbTaglia.TabIndex = 26;
             this.cmbTaglia.SelectedIndexChanged += new System.EventHandler(this.cmbTaglia_SelectedIndexChanged);
             // 
             // lblTaglia
             // 
             this.lblTaglia.AutoSize = true;
-            this.lblTaglia.Location = new System.Drawing.Point(27, 164);
+            this.lblTaglia.Location = new System.Drawing.Point(34, 215);
+            this.lblTaglia.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTaglia.Name = "lblTaglia";
-            this.lblTaglia.Size = new System.Drawing.Size(49, 16);
+            this.lblTaglia.Size = new System.Drawing.Size(64, 21);
             this.lblTaglia.TabIndex = 25;
             this.lblTaglia.Text = "Taglia:";
             // 
@@ -191,18 +206,20 @@
             // 
             this.cmbProdotto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbProdotto.FormattingEnabled = true;
-            this.cmbProdotto.Location = new System.Drawing.Point(121, 92);
+            this.cmbProdotto.Location = new System.Drawing.Point(151, 121);
+            this.cmbProdotto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbProdotto.Name = "cmbProdotto";
-            this.cmbProdotto.Size = new System.Drawing.Size(158, 24);
+            this.cmbProdotto.Size = new System.Drawing.Size(196, 29);
             this.cmbProdotto.TabIndex = 24;
             this.cmbProdotto.SelectedIndexChanged += new System.EventHandler(this.cmbProdotto_SelectedIndexChanged);
             // 
             // lblPrototto
             // 
             this.lblPrototto.AutoSize = true;
-            this.lblPrototto.Location = new System.Drawing.Point(27, 92);
+            this.lblPrototto.Location = new System.Drawing.Point(34, 121);
+            this.lblPrototto.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPrototto.Name = "lblPrototto";
-            this.lblPrototto.Size = new System.Drawing.Size(61, 16);
+            this.lblPrototto.Size = new System.Drawing.Size(89, 21);
             this.lblPrototto.TabIndex = 23;
             this.lblPrototto.Text = "Prodotto:";
             // 
@@ -210,17 +227,19 @@
             // 
             this.cmbMetodoPagamento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbMetodoPagamento.FormattingEnabled = true;
-            this.cmbMetodoPagamento.Location = new System.Drawing.Point(276, 34);
+            this.cmbMetodoPagamento.Location = new System.Drawing.Point(360, 45);
+            this.cmbMetodoPagamento.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbMetodoPagamento.Name = "cmbMetodoPagamento";
-            this.cmbMetodoPagamento.Size = new System.Drawing.Size(158, 24);
+            this.cmbMetodoPagamento.Size = new System.Drawing.Size(196, 29);
             this.cmbMetodoPagamento.TabIndex = 22;
             // 
             // lblMetodoPagamento
             // 
             this.lblMetodoPagamento.AutoSize = true;
-            this.lblMetodoPagamento.Location = new System.Drawing.Point(297, 15);
+            this.lblMetodoPagamento.Location = new System.Drawing.Point(371, 20);
+            this.lblMetodoPagamento.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblMetodoPagamento.Name = "lblMetodoPagamento";
-            this.lblMetodoPagamento.Size = new System.Drawing.Size(125, 16);
+            this.lblMetodoPagamento.Size = new System.Drawing.Size(185, 21);
             this.lblMetodoPagamento.TabIndex = 21;
             this.lblMetodoPagamento.Text = "Metodo pagamento";
             // 
@@ -228,23 +247,25 @@
             // 
             this.cmbCliente.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbCliente.FormattingEnabled = true;
-            this.cmbCliente.Location = new System.Drawing.Point(30, 34);
+            this.cmbCliente.Location = new System.Drawing.Point(38, 45);
+            this.cmbCliente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbCliente.Name = "cmbCliente";
-            this.cmbCliente.Size = new System.Drawing.Size(158, 24);
+            this.cmbCliente.Size = new System.Drawing.Size(196, 29);
             this.cmbCliente.TabIndex = 20;
             // 
             // lblCliente
             // 
             this.lblCliente.AutoSize = true;
-            this.lblCliente.Location = new System.Drawing.Point(80, 15);
+            this.lblCliente.Location = new System.Drawing.Point(100, 20);
+            this.lblCliente.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCliente.Name = "lblCliente";
-            this.lblCliente.Size = new System.Drawing.Size(48, 16);
+            this.lblCliente.Size = new System.Drawing.Size(69, 21);
             this.lblCliente.TabIndex = 19;
             this.lblCliente.Text = "Cliente";
             // 
             // ucVendite
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.txtDescrizione);
             this.Controls.Add(this.lblPrezzo);
@@ -265,8 +286,10 @@
             this.Controls.Add(this.lblMetodoPagamento);
             this.Controls.Add(this.cmbCliente);
             this.Controls.Add(this.lblCliente);
+            this.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "ucVendite";
-            this.Size = new System.Drawing.Size(809, 465);
+            this.Size = new System.Drawing.Size(1011, 610);
             this.Load += new System.EventHandler(this.ucVendite_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvScontrino)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudQta)).EndInit();

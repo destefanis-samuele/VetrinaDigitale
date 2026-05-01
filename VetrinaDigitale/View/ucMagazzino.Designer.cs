@@ -38,23 +38,28 @@
             this.dgvMagazzino.AllowUserToDeleteRows = false;
             this.dgvMagazzino.AllowUserToResizeColumns = false;
             this.dgvMagazzino.AllowUserToResizeRows = false;
+            this.dgvMagazzino.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvMagazzino.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvMagazzino.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvMagazzino.Location = new System.Drawing.Point(16, 16);
+            this.dgvMagazzino.Location = new System.Drawing.Point(20, 21);
+            this.dgvMagazzino.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvMagazzino.Name = "dgvMagazzino";
             this.dgvMagazzino.ReadOnly = true;
             this.dgvMagazzino.RowHeadersWidth = 51;
             this.dgvMagazzino.RowTemplate.Height = 24;
-            this.dgvMagazzino.Size = new System.Drawing.Size(845, 301);
+            this.dgvMagazzino.Size = new System.Drawing.Size(1056, 395);
             this.dgvMagazzino.TabIndex = 1;
             this.dgvMagazzino.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMagazzino_CellClick);
             // 
             // ucMagazzino
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.dgvMagazzino);
+            this.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "ucMagazzino";
-            this.Size = new System.Drawing.Size(873, 344);
+            this.Size = new System.Drawing.Size(1091, 452);
             this.Load += new System.EventHandler(this.ucMagazzino_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvMagazzino)).EndInit();
             this.ResumeLayout(false);

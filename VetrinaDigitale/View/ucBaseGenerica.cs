@@ -60,6 +60,8 @@ namespace VetrinaDigitale.View
             dgvDati.DataSource = controller.GetDati();
             dgvDati.Columns[nomeId].Visible = false;
             dgvDati.ClearSelection();
+            dgvDati.AutoResizeColumns();
+            dgvDati.AutoResizeRows();
         }
 
         private void btnNuovo_Click(object sender, EventArgs e)

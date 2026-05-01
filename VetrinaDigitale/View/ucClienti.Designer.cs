@@ -48,9 +48,10 @@
             // 
             // btnAggiungiCitta
             // 
-            this.btnAggiungiCitta.Location = new System.Drawing.Point(241, 450);
+            this.btnAggiungiCitta.Location = new System.Drawing.Point(342, 589);
+            this.btnAggiungiCitta.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAggiungiCitta.Name = "btnAggiungiCitta";
-            this.btnAggiungiCitta.Size = new System.Drawing.Size(138, 51);
+            this.btnAggiungiCitta.Size = new System.Drawing.Size(172, 67);
             this.btnAggiungiCitta.TabIndex = 29;
             this.btnAggiungiCitta.Text = "AGGIUNGI CITTA\'";
             this.btnAggiungiCitta.UseVisualStyleBackColor = true;
@@ -58,9 +59,10 @@
             // 
             // btnElimina
             // 
-            this.btnElimina.Location = new System.Drawing.Point(529, 464);
+            this.btnElimina.Location = new System.Drawing.Point(661, 609);
+            this.btnElimina.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnElimina.Name = "btnElimina";
-            this.btnElimina.Size = new System.Drawing.Size(141, 51);
+            this.btnElimina.Size = new System.Drawing.Size(176, 67);
             this.btnElimina.TabIndex = 28;
             this.btnElimina.Text = "ELIMINA";
             this.btnElimina.UseVisualStyleBackColor = true;
@@ -68,9 +70,10 @@
             // 
             // btnSalva
             // 
-            this.btnSalva.Location = new System.Drawing.Point(529, 388);
+            this.btnSalva.Location = new System.Drawing.Point(661, 509);
+            this.btnSalva.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSalva.Name = "btnSalva";
-            this.btnSalva.Size = new System.Drawing.Size(141, 51);
+            this.btnSalva.Size = new System.Drawing.Size(176, 67);
             this.btnSalva.TabIndex = 27;
             this.btnSalva.Text = "SALVA";
             this.btnSalva.UseVisualStyleBackColor = true;
@@ -78,9 +81,10 @@
             // 
             // btnNuovo
             // 
-            this.btnNuovo.Location = new System.Drawing.Point(529, 319);
+            this.btnNuovo.Location = new System.Drawing.Point(661, 419);
+            this.btnNuovo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnNuovo.Name = "btnNuovo";
-            this.btnNuovo.Size = new System.Drawing.Size(141, 51);
+            this.btnNuovo.Size = new System.Drawing.Size(176, 67);
             this.btnNuovo.TabIndex = 26;
             this.btnNuovo.Text = "NUOVO";
             this.btnNuovo.UseVisualStyleBackColor = true;
@@ -89,57 +93,64 @@
             // lblCitta
             // 
             this.lblCitta.AutoSize = true;
-            this.lblCitta.Location = new System.Drawing.Point(104, 445);
+            this.lblCitta.Location = new System.Drawing.Point(130, 584);
+            this.lblCitta.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCitta.Name = "lblCitta";
-            this.lblCitta.Size = new System.Drawing.Size(33, 16);
+            this.lblCitta.Size = new System.Drawing.Size(53, 21);
             this.lblCitta.TabIndex = 25;
             this.lblCitta.Text = "Città";
             // 
             // txtTelefono
             // 
-            this.txtTelefono.Location = new System.Drawing.Point(261, 402);
+            this.txtTelefono.Location = new System.Drawing.Point(326, 528);
+            this.txtTelefono.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.Size = new System.Drawing.Size(173, 22);
+            this.txtTelefono.Size = new System.Drawing.Size(215, 28);
             this.txtTelefono.TabIndex = 24;
             // 
             // lblTelefono
             // 
             this.lblTelefono.AutoSize = true;
-            this.lblTelefono.Location = new System.Drawing.Point(318, 383);
+            this.lblTelefono.Location = new System.Drawing.Point(398, 503);
+            this.lblTelefono.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTelefono.Name = "lblTelefono";
-            this.lblTelefono.Size = new System.Drawing.Size(61, 16);
+            this.lblTelefono.Size = new System.Drawing.Size(80, 21);
             this.lblTelefono.TabIndex = 23;
             this.lblTelefono.Text = "Telefono";
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(38, 402);
+            this.txtEmail.Location = new System.Drawing.Point(48, 528);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(167, 22);
+            this.txtEmail.Size = new System.Drawing.Size(208, 28);
             this.txtEmail.TabIndex = 22;
             // 
             // lblEmail
             // 
             this.lblEmail.AutoSize = true;
-            this.lblEmail.Location = new System.Drawing.Point(96, 383);
+            this.lblEmail.Location = new System.Drawing.Point(120, 503);
+            this.lblEmail.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(41, 16);
+            this.lblEmail.Size = new System.Drawing.Size(52, 21);
             this.lblEmail.TabIndex = 21;
             this.lblEmail.Text = "Email";
             // 
             // txtCognome
             // 
-            this.txtCognome.Location = new System.Drawing.Point(261, 338);
+            this.txtCognome.Location = new System.Drawing.Point(326, 444);
+            this.txtCognome.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtCognome.Name = "txtCognome";
-            this.txtCognome.Size = new System.Drawing.Size(173, 22);
+            this.txtCognome.Size = new System.Drawing.Size(215, 28);
             this.txtCognome.TabIndex = 20;
             // 
             // lblCognome
             // 
             this.lblCognome.AutoSize = true;
-            this.lblCognome.Location = new System.Drawing.Point(318, 319);
+            this.lblCognome.Location = new System.Drawing.Point(398, 419);
+            this.lblCognome.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCognome.Name = "lblCognome";
-            this.lblCognome.Size = new System.Drawing.Size(66, 16);
+            this.lblCognome.Size = new System.Drawing.Size(93, 21);
             this.lblCognome.TabIndex = 19;
             this.lblCognome.Text = "Cognome";
             // 
@@ -147,24 +158,27 @@
             // 
             this.cmbCitta.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbCitta.FormattingEnabled = true;
-            this.cmbCitta.Location = new System.Drawing.Point(38, 464);
+            this.cmbCitta.Location = new System.Drawing.Point(48, 609);
+            this.cmbCitta.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbCitta.Name = "cmbCitta";
-            this.cmbCitta.Size = new System.Drawing.Size(167, 24);
+            this.cmbCitta.Size = new System.Drawing.Size(208, 29);
             this.cmbCitta.TabIndex = 18;
             // 
             // txtNome
             // 
-            this.txtNome.Location = new System.Drawing.Point(38, 338);
+            this.txtNome.Location = new System.Drawing.Point(48, 444);
+            this.txtNome.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(167, 22);
+            this.txtNome.Size = new System.Drawing.Size(208, 28);
             this.txtNome.TabIndex = 17;
             // 
             // lblNome
             // 
             this.lblNome.AutoSize = true;
-            this.lblNome.Location = new System.Drawing.Point(96, 319);
+            this.lblNome.Location = new System.Drawing.Point(120, 419);
+            this.lblNome.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNome.Name = "lblNome";
-            this.lblNome.Size = new System.Drawing.Size(44, 16);
+            this.lblNome.Size = new System.Drawing.Size(60, 21);
             this.lblNome.TabIndex = 16;
             this.lblNome.Text = "Nome";
             // 
@@ -174,19 +188,22 @@
             this.dgvClienti.AllowUserToDeleteRows = false;
             this.dgvClienti.AllowUserToResizeColumns = false;
             this.dgvClienti.AllowUserToResizeRows = false;
+            this.dgvClienti.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvClienti.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvClienti.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvClienti.Location = new System.Drawing.Point(18, 21);
+            this.dgvClienti.Location = new System.Drawing.Point(22, 28);
+            this.dgvClienti.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvClienti.Name = "dgvClienti";
             this.dgvClienti.ReadOnly = true;
             this.dgvClienti.RowHeadersWidth = 51;
             this.dgvClienti.RowTemplate.Height = 24;
-            this.dgvClienti.Size = new System.Drawing.Size(776, 277);
+            this.dgvClienti.Size = new System.Drawing.Size(970, 364);
             this.dgvClienti.TabIndex = 15;
             this.dgvClienti.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvClienti_CellClick);
             // 
             // ucClienti
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.btnAggiungiCitta);
             this.Controls.Add(this.btnElimina);
@@ -203,8 +220,10 @@
             this.Controls.Add(this.txtNome);
             this.Controls.Add(this.lblNome);
             this.Controls.Add(this.dgvClienti);
+            this.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "ucClienti";
-            this.Size = new System.Drawing.Size(813, 537);
+            this.Size = new System.Drawing.Size(1016, 705);
             this.Load += new System.EventHandler(this.ucClienti_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvClienti)).EndInit();
             this.ResumeLayout(false);

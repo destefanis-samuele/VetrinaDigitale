@@ -46,9 +46,10 @@
             // 
             // btnElimina
             // 
-            this.btnElimina.Location = new System.Drawing.Point(531, 464);
+            this.btnElimina.Location = new System.Drawing.Point(664, 609);
+            this.btnElimina.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnElimina.Name = "btnElimina";
-            this.btnElimina.Size = new System.Drawing.Size(141, 51);
+            this.btnElimina.Size = new System.Drawing.Size(176, 67);
             this.btnElimina.TabIndex = 39;
             this.btnElimina.Text = "ELIMINA";
             this.btnElimina.UseVisualStyleBackColor = true;
@@ -56,9 +57,10 @@
             // 
             // btnSalva
             // 
-            this.btnSalva.Location = new System.Drawing.Point(531, 388);
+            this.btnSalva.Location = new System.Drawing.Point(664, 509);
+            this.btnSalva.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSalva.Name = "btnSalva";
-            this.btnSalva.Size = new System.Drawing.Size(141, 51);
+            this.btnSalva.Size = new System.Drawing.Size(176, 67);
             this.btnSalva.TabIndex = 38;
             this.btnSalva.Text = "SALVA";
             this.btnSalva.UseVisualStyleBackColor = true;
@@ -66,9 +68,10 @@
             // 
             // btnNuovo
             // 
-            this.btnNuovo.Location = new System.Drawing.Point(531, 319);
+            this.btnNuovo.Location = new System.Drawing.Point(664, 419);
+            this.btnNuovo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnNuovo.Name = "btnNuovo";
-            this.btnNuovo.Size = new System.Drawing.Size(141, 51);
+            this.btnNuovo.Size = new System.Drawing.Size(176, 67);
             this.btnNuovo.TabIndex = 37;
             this.btnNuovo.Text = "NUOVO";
             this.btnNuovo.UseVisualStyleBackColor = true;
@@ -77,41 +80,46 @@
             // lblCitta
             // 
             this.lblCitta.AutoSize = true;
-            this.lblCitta.Location = new System.Drawing.Point(328, 379);
+            this.lblCitta.Location = new System.Drawing.Point(410, 497);
+            this.lblCitta.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCitta.Name = "lblCitta";
-            this.lblCitta.Size = new System.Drawing.Size(33, 16);
+            this.lblCitta.Size = new System.Drawing.Size(53, 21);
             this.lblCitta.TabIndex = 36;
             this.lblCitta.Text = "Città";
             // 
             // txtTelefono
             // 
-            this.txtTelefono.Location = new System.Drawing.Point(41, 398);
+            this.txtTelefono.Location = new System.Drawing.Point(51, 522);
+            this.txtTelefono.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.Size = new System.Drawing.Size(173, 22);
+            this.txtTelefono.Size = new System.Drawing.Size(215, 28);
             this.txtTelefono.TabIndex = 35;
             // 
             // lblTelefono
             // 
             this.lblTelefono.AutoSize = true;
-            this.lblTelefono.Location = new System.Drawing.Point(98, 379);
+            this.lblTelefono.Location = new System.Drawing.Point(122, 497);
+            this.lblTelefono.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTelefono.Name = "lblTelefono";
-            this.lblTelefono.Size = new System.Drawing.Size(61, 16);
+            this.lblTelefono.Size = new System.Drawing.Size(80, 21);
             this.lblTelefono.TabIndex = 34;
             this.lblTelefono.Text = "Telefono";
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(262, 338);
+            this.txtEmail.Location = new System.Drawing.Point(328, 444);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(167, 22);
+            this.txtEmail.Size = new System.Drawing.Size(208, 28);
             this.txtEmail.TabIndex = 33;
             // 
             // lblEmail
             // 
             this.lblEmail.AutoSize = true;
-            this.lblEmail.Location = new System.Drawing.Point(320, 319);
+            this.lblEmail.Location = new System.Drawing.Point(400, 419);
+            this.lblEmail.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(41, 16);
+            this.lblEmail.Size = new System.Drawing.Size(52, 21);
             this.lblEmail.TabIndex = 32;
             this.lblEmail.Text = "Email";
             // 
@@ -119,24 +127,27 @@
             // 
             this.cmbCitta.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbCitta.FormattingEnabled = true;
-            this.cmbCitta.Location = new System.Drawing.Point(262, 398);
+            this.cmbCitta.Location = new System.Drawing.Point(328, 522);
+            this.cmbCitta.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbCitta.Name = "cmbCitta";
-            this.cmbCitta.Size = new System.Drawing.Size(167, 24);
+            this.cmbCitta.Size = new System.Drawing.Size(208, 29);
             this.cmbCitta.TabIndex = 31;
             // 
             // txtNome
             // 
-            this.txtNome.Location = new System.Drawing.Point(40, 338);
+            this.txtNome.Location = new System.Drawing.Point(50, 444);
+            this.txtNome.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(167, 22);
+            this.txtNome.Size = new System.Drawing.Size(208, 28);
             this.txtNome.TabIndex = 30;
             // 
             // lblNome
             // 
             this.lblNome.AutoSize = true;
-            this.lblNome.Location = new System.Drawing.Point(98, 319);
+            this.lblNome.Location = new System.Drawing.Point(122, 419);
+            this.lblNome.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNome.Name = "lblNome";
-            this.lblNome.Size = new System.Drawing.Size(44, 16);
+            this.lblNome.Size = new System.Drawing.Size(60, 21);
             this.lblNome.TabIndex = 29;
             this.lblNome.Text = "Nome";
             // 
@@ -146,21 +157,25 @@
             this.dgvFornitori.AllowUserToDeleteRows = false;
             this.dgvFornitori.AllowUserToResizeColumns = false;
             this.dgvFornitori.AllowUserToResizeRows = false;
+            this.dgvFornitori.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvFornitori.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvFornitori.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvFornitori.Location = new System.Drawing.Point(20, 21);
+            this.dgvFornitori.Location = new System.Drawing.Point(25, 28);
+            this.dgvFornitori.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvFornitori.Name = "dgvFornitori";
             this.dgvFornitori.ReadOnly = true;
             this.dgvFornitori.RowHeadersWidth = 51;
             this.dgvFornitori.RowTemplate.Height = 24;
-            this.dgvFornitori.Size = new System.Drawing.Size(776, 277);
+            this.dgvFornitori.Size = new System.Drawing.Size(970, 364);
             this.dgvFornitori.TabIndex = 28;
             this.dgvFornitori.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvFornitori_CellClick);
             // 
             // btnAggiungiCitta
             // 
-            this.btnAggiungiCitta.Location = new System.Drawing.Point(194, 447);
+            this.btnAggiungiCitta.Location = new System.Drawing.Point(242, 587);
+            this.btnAggiungiCitta.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAggiungiCitta.Name = "btnAggiungiCitta";
-            this.btnAggiungiCitta.Size = new System.Drawing.Size(138, 51);
+            this.btnAggiungiCitta.Size = new System.Drawing.Size(172, 67);
             this.btnAggiungiCitta.TabIndex = 40;
             this.btnAggiungiCitta.Text = "AGGIUNGI CITTA\'";
             this.btnAggiungiCitta.UseVisualStyleBackColor = true;
@@ -168,7 +183,7 @@
             // 
             // ucFornitori
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.btnAggiungiCitta);
             this.Controls.Add(this.btnElimina);
@@ -183,8 +198,10 @@
             this.Controls.Add(this.txtNome);
             this.Controls.Add(this.lblNome);
             this.Controls.Add(this.dgvFornitori);
+            this.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "ucFornitori";
-            this.Size = new System.Drawing.Size(821, 537);
+            this.Size = new System.Drawing.Size(1026, 705);
             this.Load += new System.EventHandler(this.ucFornitori_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvFornitori)).EndInit();
             this.ResumeLayout(false);
