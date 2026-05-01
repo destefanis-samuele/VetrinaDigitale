@@ -222,7 +222,19 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Resources\bookmark.png" />
+    <Content Include="Resources\chart-bar-stacked.png" />
+    <Content Include="Resources\circle-user-round.png" />
+    <Content Include="Resources\diameter.png" />
     <Content Include="Resources\icona.ico" />
+    <Content Include="Resources\palette.png" />
+    <Content Include="Resources\percent.png" />
+    <Content Include="Resources\shopping-basket.png" />
+    <Content Include="Resources\user-key.png" />
+    <Content Include="Resources\user.png" />
+    <Content Include="Resources\van.png" />
+    <Content Include="Resources\venus-and-mars.png" />
+    <Content Include="Resources\warehouse.png" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
@@ -237,6 +249,7 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Resources\logo-colored.png" />
     <Content Include="Resources\logo.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
