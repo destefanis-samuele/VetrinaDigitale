@@ -14,9 +14,8 @@ namespace ADOSQLServer2017_ns
     public class ADOSQLServer2017
     {
         private SqlConnection cn;
-        //
-        //public ADOSQLServer2017()
-        //{ }
+
+
         /// <summary>
         /// Classe di accesso a DB SQLServer
         /// </summary>
@@ -25,6 +24,7 @@ namespace ADOSQLServer2017_ns
         {
             impostaConnessione(dbName);
         }
+
         private void impostaConnessione(string dbName)
         {
             string cnString, DB;
@@ -49,6 +49,8 @@ namespace ADOSQLServer2017_ns
                 throw new Exception(ex.Message);
             }
         }
+
+
         /// <summary>
         /// Esegue una query che ritorna un dataTable
         /// </summary>
@@ -70,6 +72,8 @@ namespace ADOSQLServer2017_ns
             }
             return dt;
         }
+
+
         /// <summary>
         /// Esegue Query che non ritornano dataTable
         /// </summary>
@@ -89,6 +93,8 @@ namespace ADOSQLServer2017_ns
             }
             return ris;
         }
+
+
         /// <summary>
         /// Esegue Query che non ritornano un singolo valore
         /// </summary>
