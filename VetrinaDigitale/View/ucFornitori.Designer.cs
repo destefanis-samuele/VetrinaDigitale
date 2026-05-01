@@ -184,7 +184,7 @@
             this.Controls.Add(this.lblNome);
             this.Controls.Add(this.dgvFornitori);
             this.Name = "ucFornitori";
-            this.Size = new System.Drawing.Size(880, 625);
+            this.Size = new System.Drawing.Size(821, 537);
             this.Load += new System.EventHandler(this.ucFornitori_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvFornitori)).EndInit();
             this.ResumeLayout(false);

@@ -53,7 +53,7 @@
             // 
             // txtDescrizione
             // 
-            this.txtDescrizione.Location = new System.Drawing.Point(22, 399);
+            this.txtDescrizione.Location = new System.Drawing.Point(23, 321);
             this.txtDescrizione.Multiline = true;
             this.txtDescrizione.Name = "txtDescrizione";
             this.txtDescrizione.ReadOnly = true;
@@ -63,7 +63,7 @@
             // lblPrezzo
             // 
             this.lblPrezzo.AutoSize = true;
-            this.lblPrezzo.Location = new System.Drawing.Point(117, 207);
+            this.lblPrezzo.Location = new System.Drawing.Point(118, 129);
             this.lblPrezzo.Name = "lblPrezzo";
             this.lblPrezzo.Size = new System.Drawing.Size(51, 16);
             this.lblPrezzo.TabIndex = 36;
@@ -71,7 +71,7 @@
             // 
             // btnConferma
             // 
-            this.btnConferma.Location = new System.Drawing.Point(497, 438);
+            this.btnConferma.Location = new System.Drawing.Point(498, 360);
             this.btnConferma.Name = "btnConferma";
             this.btnConferma.Size = new System.Drawing.Size(109, 31);
             this.btnConferma.TabIndex = 35;
@@ -82,7 +82,7 @@
             // lblTotale
             // 
             this.lblTotale.AutoSize = true;
-            this.lblTotale.Location = new System.Drawing.Point(494, 363);
+            this.lblTotale.Location = new System.Drawing.Point(495, 285);
             this.lblTotale.Name = "lblTotale";
             this.lblTotale.Size = new System.Drawing.Size(49, 16);
             this.lblTotale.TabIndex = 34;
@@ -95,7 +95,7 @@
             this.dgvScontrino.AllowUserToResizeColumns = false;
             this.dgvScontrino.AllowUserToResizeRows = false;
             this.dgvScontrino.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvScontrino.Location = new System.Drawing.Point(299, 156);
+            this.dgvScontrino.Location = new System.Drawing.Point(300, 78);
             this.dgvScontrino.Name = "dgvScontrino";
             this.dgvScontrino.ReadOnly = true;
             this.dgvScontrino.RowHeadersWidth = 51;
@@ -105,7 +105,7 @@
             // 
             // btnAggiungi
             // 
-            this.btnAggiungi.Location = new System.Drawing.Point(93, 494);
+            this.btnAggiungi.Location = new System.Drawing.Point(94, 416);
             this.btnAggiungi.Name = "btnAggiungi";
             this.btnAggiungi.Size = new System.Drawing.Size(109, 31);
             this.btnAggiungi.TabIndex = 32;
@@ -116,7 +116,7 @@
             // lblQtaDisponibile
             // 
             this.lblQtaDisponibile.AutoSize = true;
-            this.lblQtaDisponibile.Location = new System.Drawing.Point(90, 363);
+            this.lblQtaDisponibile.Location = new System.Drawing.Point(91, 285);
             this.lblQtaDisponibile.Name = "lblQtaDisponibile";
             this.lblQtaDisponibile.Size = new System.Drawing.Size(128, 16);
             this.lblQtaDisponibile.TabIndex = 31;
@@ -124,7 +124,7 @@
             // 
             // nudQta
             // 
-            this.nudQta.Location = new System.Drawing.Point(120, 332);
+            this.nudQta.Location = new System.Drawing.Point(121, 254);
             this.nudQta.Minimum = new decimal(new int[] {
             1,
             0,
@@ -143,7 +143,7 @@
             // lblQta
             // 
             this.lblQta.AutoSize = true;
-            this.lblQta.Location = new System.Drawing.Point(25, 334);
+            this.lblQta.Location = new System.Drawing.Point(26, 256);
             this.lblQta.Name = "lblQta";
             this.lblQta.Size = new System.Drawing.Size(59, 16);
             this.lblQta.TabIndex = 29;
@@ -153,7 +153,7 @@
             // 
             this.cmbColore.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbColore.FormattingEnabled = true;
-            this.cmbColore.Location = new System.Drawing.Point(120, 288);
+            this.cmbColore.Location = new System.Drawing.Point(121, 210);
             this.cmbColore.Name = "cmbColore";
             this.cmbColore.Size = new System.Drawing.Size(158, 24);
             this.cmbColore.TabIndex = 28;
@@ -162,7 +162,7 @@
             // lblColore
             // 
             this.lblColore.AutoSize = true;
-            this.lblColore.Location = new System.Drawing.Point(26, 288);
+            this.lblColore.Location = new System.Drawing.Point(27, 210);
             this.lblColore.Name = "lblColore";
             this.lblColore.Size = new System.Drawing.Size(50, 16);
             this.lblColore.TabIndex = 27;
@@ -172,7 +172,7 @@
             // 
             this.cmbTaglia.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbTaglia.FormattingEnabled = true;
-            this.cmbTaglia.Location = new System.Drawing.Point(120, 242);
+            this.cmbTaglia.Location = new System.Drawing.Point(121, 164);
             this.cmbTaglia.Name = "cmbTaglia";
             this.cmbTaglia.Size = new System.Drawing.Size(158, 24);
             this.cmbTaglia.TabIndex = 26;
@@ -181,7 +181,7 @@
             // lblTaglia
             // 
             this.lblTaglia.AutoSize = true;
-            this.lblTaglia.Location = new System.Drawing.Point(26, 242);
+            this.lblTaglia.Location = new System.Drawing.Point(27, 164);
             this.lblTaglia.Name = "lblTaglia";
             this.lblTaglia.Size = new System.Drawing.Size(49, 16);
             this.lblTaglia.TabIndex = 25;
@@ -191,7 +191,7 @@
             // 
             this.cmbProdotto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbProdotto.FormattingEnabled = true;
-            this.cmbProdotto.Location = new System.Drawing.Point(120, 170);
+            this.cmbProdotto.Location = new System.Drawing.Point(121, 92);
             this.cmbProdotto.Name = "cmbProdotto";
             this.cmbProdotto.Size = new System.Drawing.Size(158, 24);
             this.cmbProdotto.TabIndex = 24;
@@ -200,7 +200,7 @@
             // lblPrototto
             // 
             this.lblPrototto.AutoSize = true;
-            this.lblPrototto.Location = new System.Drawing.Point(26, 170);
+            this.lblPrototto.Location = new System.Drawing.Point(27, 92);
             this.lblPrototto.Name = "lblPrototto";
             this.lblPrototto.Size = new System.Drawing.Size(61, 16);
             this.lblPrototto.TabIndex = 23;
@@ -210,7 +210,7 @@
             // 
             this.cmbMetodoPagamento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbMetodoPagamento.FormattingEnabled = true;
-            this.cmbMetodoPagamento.Location = new System.Drawing.Point(275, 112);
+            this.cmbMetodoPagamento.Location = new System.Drawing.Point(276, 34);
             this.cmbMetodoPagamento.Name = "cmbMetodoPagamento";
             this.cmbMetodoPagamento.Size = new System.Drawing.Size(158, 24);
             this.cmbMetodoPagamento.TabIndex = 22;
@@ -218,7 +218,7 @@
             // lblMetodoPagamento
             // 
             this.lblMetodoPagamento.AutoSize = true;
-            this.lblMetodoPagamento.Location = new System.Drawing.Point(296, 93);
+            this.lblMetodoPagamento.Location = new System.Drawing.Point(297, 15);
             this.lblMetodoPagamento.Name = "lblMetodoPagamento";
             this.lblMetodoPagamento.Size = new System.Drawing.Size(125, 16);
             this.lblMetodoPagamento.TabIndex = 21;
@@ -228,7 +228,7 @@
             // 
             this.cmbCliente.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbCliente.FormattingEnabled = true;
-            this.cmbCliente.Location = new System.Drawing.Point(29, 112);
+            this.cmbCliente.Location = new System.Drawing.Point(30, 34);
             this.cmbCliente.Name = "cmbCliente";
             this.cmbCliente.Size = new System.Drawing.Size(158, 24);
             this.cmbCliente.TabIndex = 20;
@@ -236,7 +236,7 @@
             // lblCliente
             // 
             this.lblCliente.AutoSize = true;
-            this.lblCliente.Location = new System.Drawing.Point(79, 93);
+            this.lblCliente.Location = new System.Drawing.Point(80, 15);
             this.lblCliente.Name = "lblCliente";
             this.lblCliente.Size = new System.Drawing.Size(48, 16);
             this.lblCliente.TabIndex = 19;
@@ -266,7 +266,7 @@
             this.Controls.Add(this.cmbCliente);
             this.Controls.Add(this.lblCliente);
             this.Name = "ucVendite";
-            this.Size = new System.Drawing.Size(809, 619);
+            this.Size = new System.Drawing.Size(809, 465);
             this.Load += new System.EventHandler(this.ucVendite_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvScontrino)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudQta)).EndInit();

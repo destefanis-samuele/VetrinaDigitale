@@ -100,12 +100,6 @@
     <Compile Include="View\ucBaseGenerica.Designer.cs">
       <DependentUpon>ucBaseGenerica.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\ucCitta.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="View\ucCitta.Designer.cs">
-      <DependentUpon>ucCitta.cs</DependentUpon>
-    </Compile>
     <Compile Include="View\ucClienti.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -146,9 +140,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\ucBaseGenerica.resx">
       <DependentUpon>ucBaseGenerica.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\ucCitta.resx">
-      <DependentUpon>ucCitta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\ucClienti.resx">
       <DependentUpon>ucClienti.cs</DependentUpon>

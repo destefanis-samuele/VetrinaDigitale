@@ -39,7 +39,7 @@
             // 
             // btnElimina
             // 
-            this.btnElimina.Location = new System.Drawing.Point(574, 345);
+            this.btnElimina.Location = new System.Drawing.Point(470, 271);
             this.btnElimina.Name = "btnElimina";
             this.btnElimina.Size = new System.Drawing.Size(141, 51);
             this.btnElimina.TabIndex = 25;
@@ -49,7 +49,7 @@
             // 
             // btnSalva
             // 
-            this.btnSalva.Location = new System.Drawing.Point(574, 269);
+            this.btnSalva.Location = new System.Drawing.Point(470, 195);
             this.btnSalva.Name = "btnSalva";
             this.btnSalva.Size = new System.Drawing.Size(141, 51);
             this.btnSalva.TabIndex = 24;
@@ -59,7 +59,7 @@
             // 
             // btnNuovo
             // 
-            this.btnNuovo.Location = new System.Drawing.Point(574, 200);
+            this.btnNuovo.Location = new System.Drawing.Point(470, 126);
             this.btnNuovo.Name = "btnNuovo";
             this.btnNuovo.Size = new System.Drawing.Size(141, 51);
             this.btnNuovo.TabIndex = 23;
@@ -69,7 +69,7 @@
             // 
             // txtNome
             // 
-            this.txtNome.Location = new System.Drawing.Point(556, 134);
+            this.txtNome.Location = new System.Drawing.Point(486, 60);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(217, 22);
             this.txtNome.TabIndex = 22;
@@ -77,7 +77,7 @@
             // lblNome
             // 
             this.lblNome.AutoSize = true;
-            this.lblNome.Location = new System.Drawing.Point(491, 134);
+            this.lblNome.Location = new System.Drawing.Point(383, 63);
             this.lblNome.Name = "lblNome";
             this.lblNome.Size = new System.Drawing.Size(47, 16);
             this.lblNome.TabIndex = 21;
@@ -90,7 +90,7 @@
             this.dgvDati.AllowUserToResizeColumns = false;
             this.dgvDati.AllowUserToResizeRows = false;
             this.dgvDati.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDati.Location = new System.Drawing.Point(123, 97);
+            this.dgvDati.Location = new System.Drawing.Point(19, 23);
             this.dgvDati.Name = "dgvDati";
             this.dgvDati.ReadOnly = true;
             this.dgvDati.RowHeadersWidth = 51;
@@ -110,7 +110,7 @@
             this.Controls.Add(this.lblNome);
             this.Controls.Add(this.dgvDati);
             this.Name = "ucBaseGenerica";
-            this.Size = new System.Drawing.Size(896, 620);
+            this.Size = new System.Drawing.Size(715, 479);
             this.Load += new System.EventHandler(this.ucBaseGenerica_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDati)).EndInit();
             this.ResumeLayout(false);
