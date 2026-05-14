@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMenu));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnResi = new System.Windows.Forms.Button();
             this.btnMagazzino = new System.Windows.Forms.Button();
             this.btnColori = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -57,6 +58,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.panel1.Controls.Add(this.btnResi);
             this.panel1.Controls.Add(this.btnMagazzino);
             this.panel1.Controls.Add(this.btnColori);
             this.panel1.Controls.Add(this.panel4);
@@ -75,6 +77,23 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(296, 700);
             this.panel1.TabIndex = 10;
+            // 
+            // btnResi
+            // 
+            this.btnResi.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnResi.FlatAppearance.BorderSize = 0;
+            this.btnResi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnResi.Image = ((System.Drawing.Image)(resources.GetObject("btnResi.Image")));
+            this.btnResi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnResi.Location = new System.Drawing.Point(17, 642);
+            this.btnResi.Margin = new System.Windows.Forms.Padding(4);
+            this.btnResi.Name = "btnResi";
+            this.btnResi.Size = new System.Drawing.Size(264, 45);
+            this.btnResi.TabIndex = 10;
+            this.btnResi.Text = "  Resi";
+            this.btnResi.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnResi.UseVisualStyleBackColor = true;
+            this.btnResi.Click += new System.EventHandler(this.btnResi_Click);
             // 
             // btnMagazzino
             // 
@@ -339,6 +358,7 @@
             this.Name = "frmMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MENU\'";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
@@ -369,5 +389,6 @@
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panelContenuto;
         private System.Windows.Forms.Label lblDescrizione;
+        private System.Windows.Forms.Button btnResi;
     }
 }

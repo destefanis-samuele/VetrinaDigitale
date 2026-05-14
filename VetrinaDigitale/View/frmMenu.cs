@@ -90,5 +90,10 @@ namespace VetrinaDigitale.View
             MostraSchermata(uc);
         }
 
+        private void btnResi_Click(object sender, EventArgs e)
+        {
+            ucResi ucResi = new ucResi("Gestione resi");
+            MostraSchermata(ucResi);
+        }
     }
 }
