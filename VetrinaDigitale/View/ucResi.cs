@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+//
+using VetrinaDigitale.Controller;
 
 namespace VetrinaDigitale.View
 {
@@ -18,6 +20,8 @@ namespace VetrinaDigitale.View
             InitializeComponent();
             _testoLbl = testoLbl;
         }
+
+        clsResiController resiController = new clsResiController();
 
         private void ucResi_Load(object sender, EventArgs e)
         {
@@ -101,6 +105,32 @@ namespace VetrinaDigitale.View
             motivo.Items.Add("Ripensamento");
             motivo.Items.Add("Altro");
             dgvResi.Columns.Add(motivo);
+        }
+
+        private void btnCerca_Click(object sender, EventArgs e)
+        {
+            if(txtScontrino.Text.Trim() == "")
+            {
+                MessageBox.Show("Inserisci un numero di scontrino valido.", "Errore", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            
+            int idScontrino = Convert.ToInt32(txtScontrino.Text);
+            
+            dgvResi.DataSource = resiController.GetRigheScontrinoPerReso(idScontrino);
+            
+            foreach (DataGridViewRow row in dgvResi.Rows)
+            {
+                int disponibile = Convert.ToInt32(row.Cells["QuantitaDisponibile"].Value);
+
+                if (disponibile == 0)
+                {
+                    row.DefaultCellStyle.BackColor = Color.LightGray;
+                    row.Cells["Seleziona"].ReadOnly = true;
+                }
+            }
+
         }
     }
 }

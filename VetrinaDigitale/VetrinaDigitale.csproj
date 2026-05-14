@@ -69,6 +69,7 @@
     <Compile Include="Controller\clsLoginController.cs" />
     <Compile Include="Controller\clsMagazzinoController.cs" />
     <Compile Include="Controller\clsOrdiniController.cs" />
+    <Compile Include="Controller\clsResiController.cs" />
     <Compile Include="Controller\clsVenditeController.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

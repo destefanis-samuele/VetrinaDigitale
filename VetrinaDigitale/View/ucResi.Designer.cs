@@ -38,7 +38,7 @@
             // txtScontrino
             // 
             this.txtScontrino.Location = new System.Drawing.Point(161, 43);
-            this.txtScontrino.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtScontrino.Margin = new System.Windows.Forms.Padding(4);
             this.txtScontrino.Name = "txtScontrino";
             this.txtScontrino.Size = new System.Drawing.Size(80, 28);
             this.txtScontrino.TabIndex = 0;
@@ -46,12 +46,13 @@
             // btnCerca
             // 
             this.btnCerca.Location = new System.Drawing.Point(292, 23);
-            this.btnCerca.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCerca.Margin = new System.Windows.Forms.Padding(4);
             this.btnCerca.Name = "btnCerca";
             this.btnCerca.Size = new System.Drawing.Size(130, 66);
             this.btnCerca.TabIndex = 1;
             this.btnCerca.Text = "CERCA";
             this.btnCerca.UseVisualStyleBackColor = true;
+            this.btnCerca.Click += new System.EventHandler(this.btnCerca_Click);
             // 
             // lblNumeroScontrino
             // 
@@ -86,7 +87,7 @@
             this.Controls.Add(this.btnCerca);
             this.Controls.Add(this.txtScontrino);
             this.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ucResi";
             this.Size = new System.Drawing.Size(967, 749);
             this.Load += new System.EventHandler(this.ucResi_Load);
