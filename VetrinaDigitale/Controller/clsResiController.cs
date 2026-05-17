@@ -22,6 +22,17 @@ namespace VetrinaDigitale.Controller
             ado = new ADOSQLServer2017(dbName);
         }
 
+        public class RigaReso
+        {
+            public int IdRiga { get; set; }
+
+            public int IdVariante { get; set; }
+
+            public int Quantita { get; set; }
+
+            public string Motivo { get; set; }
+        }
+
         public DataTable GetRigheScontrinoPerReso(int idScontrino)
         {
             DataTable dt = new DataTable();
@@ -44,6 +55,40 @@ namespace VetrinaDigitale.Controller
             }
 
             return dt;
+        }
+
+        public void SalvaReso(List<RigaReso> righe)
+        {
+            SqlConnection conn = ado.GetConnection();
+            SqlTransaction trans = conn.BeginTransaction();
+
+            try
+            {
+                foreach (var riga in righe)
+                {
+                    //INSERT RESO
+                    string queryInsertReso = "INSERT INTO RESI (idRiga, quantita, motivo) VALUES (@idRiga, @quantita, @motivo)";
+                    SqlCommand cmdReso = new SqlCommand(queryInsertReso, conn, trans);
+                    cmdReso.Parameters.AddWithValue("@idRiga", riga.IdRiga);
+                    cmdReso.Parameters.AddWithValue("@quantita", riga.Quantita);
+                    cmdReso.Parameters.AddWithValue("@motivo", riga.Motivo);
+                    ado.EseguiNonQuery(cmdReso);
+
+                    //UPDATE MAGAZZINO
+                    string queryUpdateMagazzino = "UPDATE VARIANTI_PRODOTTO SET quantitaDisponibile = quantitaDisponibile + @quantita WHERE idVariante = @idVariante";
+                    SqlCommand cmdMagazzino = new SqlCommand(queryUpdateMagazzino, conn, trans);
+                    cmdMagazzino.Parameters.AddWithValue("@quantita", riga.Quantita);
+                    cmdMagazzino.Parameters.AddWithValue("@idVariante", riga.IdVariante);
+                    ado.EseguiNonQuery(cmdMagazzino);
+                }
+
+                trans.Commit();
+            }
+            catch (Exception ex)
+            {
+                trans.Rollback();
+                throw new Exception("Errore durante il salvataggio del reso: " + ex.Message);
+            }
         }
     }
 }

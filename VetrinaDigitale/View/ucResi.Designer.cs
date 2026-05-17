@@ -32,6 +32,7 @@
             this.btnCerca = new System.Windows.Forms.Button();
             this.lblNumeroScontrino = new System.Windows.Forms.Label();
             this.dgvResi = new System.Windows.Forms.DataGridView();
+            this.btnConferma = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvResi)).BeginInit();
             this.SuspendLayout();
             // 
@@ -77,11 +78,24 @@
             this.dgvResi.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvResi.Size = new System.Drawing.Size(903, 254);
             this.dgvResi.TabIndex = 3;
+            this.dgvResi.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvResi_CellEndEdit);
+            // 
+            // btnConferma
+            // 
+            this.btnConferma.Location = new System.Drawing.Point(387, 407);
+            this.btnConferma.Margin = new System.Windows.Forms.Padding(4);
+            this.btnConferma.Name = "btnConferma";
+            this.btnConferma.Size = new System.Drawing.Size(130, 66);
+            this.btnConferma.TabIndex = 4;
+            this.btnConferma.Text = "CONFERMA";
+            this.btnConferma.UseVisualStyleBackColor = true;
+            this.btnConferma.Click += new System.EventHandler(this.btnConferma_Click);
             // 
             // ucResi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btnConferma);
             this.Controls.Add(this.dgvResi);
             this.Controls.Add(this.lblNumeroScontrino);
             this.Controls.Add(this.btnCerca);
@@ -103,5 +117,6 @@
         private System.Windows.Forms.Button btnCerca;
         private System.Windows.Forms.Label lblNumeroScontrino;
         private System.Windows.Forms.DataGridView dgvResi;
+        private System.Windows.Forms.Button btnConferma;
     }
 }
